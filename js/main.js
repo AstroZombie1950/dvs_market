@@ -8,7 +8,7 @@
 		if (!ticking) {
 			requestAnimationFrame(function () {
 				var current = window.scrollY;
-				if (current > 60 && current > lastScroll) {
+				if (current > 80 && current > lastScroll) {
 					topbar.classList.add('hidden');
 				} else if (current < lastScroll || current <= 10) {
 					topbar.classList.remove('hidden');
