@@ -191,3 +191,17 @@ initPhoneMask('modal-phone');
 		}
 	}
 })();
+
+/* --- Hero slideshow --- */
+(function () {
+	const slides = document.querySelectorAll('.hero__slide');
+	if (!slides.length) return;
+
+	let current = 0;
+
+	setInterval(function () {
+		slides[current].classList.remove('active');
+		current = (current + 1) % slides.length;
+		slides[current].classList.add('active');
+	}, 5000);
+})();
