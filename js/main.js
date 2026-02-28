@@ -159,9 +159,10 @@ function initPhoneMask(inputId) {
 /* Инициализируем все поля телефона на странице */
 initPhoneMask('cta-phone');
 initPhoneMask('modal-phone');
+initPhoneMask('ctam-phone');
 
 
-/* ---- Валидация имени ---- */
+/* ---- Валидация имени Modal---- */
 (function () {
 	const input = document.getElementById('modal-name');
 	if (!input) return;
@@ -192,6 +193,62 @@ initPhoneMask('modal-phone');
 	}
 })();
 
+/* --- Валидация текстовых полей cta-main --- */
+(function () {
+	const nameInput  = document.getElementById('ctam-name');
+	const phoneInput = document.getElementById('ctam-phone');
+	const cityInput  = document.getElementById('ctam-city');
+	const submitBtn  = document.querySelector('#ctam-name')?.closest('form')?.querySelector('button[type="submit"]');
+	if (!nameInput || !cityInput || !submitBtn) return;
+
+	function initTextField(input, minLen) {
+		input.addEventListener('input', function () {
+			const clean = input.value.replace(/[^a-zA-Zа-яА-ЯёЁ\s]/g, '');
+			if (input.value !== clean) input.value = clean;
+			updateState(input, minLen);
+			updateBtn();
+		});
+		input.addEventListener('blur', function () {
+			updateState(input, minLen);
+		});
+	}
+
+	function updateState(input, minLen) {
+		const val = input.value.trim();
+		if (val.length === 0) {
+			input.classList.remove('input--valid', 'input--invalid');
+			return;
+		}
+		if (val.length >= minLen) {
+			input.classList.add('input--valid');
+			input.classList.remove('input--invalid');
+		} else {
+			input.classList.add('input--invalid');
+			input.classList.remove('input--valid');
+		}
+	}
+
+	function isPhoneValid() {
+		return phoneInput.value.replace(/\D/g, '').replace(/^7/, '').length === 10;
+	}
+
+	function updateBtn() {
+		const ok = nameInput.value.trim().length >= 2
+			&& isPhoneValid()
+			&& cityInput.value.trim().length >= 2;
+		submitBtn.disabled = !ok;
+	}
+
+	/* телефон тоже триггерит кнопку */
+	phoneInput.addEventListener('input', updateBtn);
+
+	initTextField(nameInput, 2);
+	initTextField(cityInput, 2);
+
+	/* начальное состояние */
+	submitBtn.disabled = true;
+})();
+
 /* --- Hero slideshow --- */
 (function () {
 	const slides = document.querySelectorAll('.hero__slide');
@@ -204,4 +261,60 @@ initPhoneMask('modal-phone');
 		current = (current + 1) % slides.length;
 		slides[current].classList.add('active');
 	}, 5000);
+})();
+
+/* --- Счётчики "ДВС доставлено для клиентов" --- */
+(function () {
+	const nums = document.querySelectorAll('.engine-replace__num');
+	if (!nums.length) return;
+
+	function animateCounter(el) {
+		const target = parseInt(el.dataset.target);
+		const suffix = el.dataset.suffix || '';
+		const duration = 1800;
+		const step = 16;
+		const steps = duration / step;
+		const increment = target / steps;
+		let current = 0;
+
+		const timer = setInterval(function () {
+			current += increment;
+			if (current >= target) {
+				current = target;
+				clearInterval(timer);
+			}
+			el.textContent = Math.floor(current) + suffix;
+		}, step);
+	}
+
+	const observer = new IntersectionObserver(function (entries) {
+		entries.forEach(function (entry) {
+			if (entry.isIntersecting) {
+				animateCounter(entry.target);
+				observer.unobserve(entry.target);
+			}
+		});
+	}, { threshold: 0.5 });
+
+	nums.forEach(function (el) { observer.observe(el); });
+})();
+
+/* --- Products slider --- */
+(function () {
+	const slides = document.querySelectorAll('.products-slider__slide');
+	const dots   = document.querySelectorAll('.ps-dot');
+	if (!slides.length) return;
+
+	function goTo(index) {
+		slides.forEach(function (s) { s.classList.remove('active'); });
+		dots.forEach(function (d)   { d.classList.remove('active'); });
+		slides[index].classList.add('active');
+		dots[index].classList.add('active');
+	}
+
+	dots.forEach(function (dot) {
+		dot.addEventListener('click', function () {
+			goTo(parseInt(this.dataset.index));
+		});
+	});
 })();

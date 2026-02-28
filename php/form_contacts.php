@@ -29,6 +29,7 @@ $headers = implode("\r\n", [
 ]);
 
 /* plain-text body */
+$body  = "Новая заявка с сайта (страница 'Контакты').\n";
 $body  = "Имя: {$name}\n";
 $body .= "Email: {$email}\n";
 $body .= "Телефон: {$phone}\n";
