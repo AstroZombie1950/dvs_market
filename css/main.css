@@ -24,6 +24,11 @@ body {
 	font-family: var(--font-body);
 	font-size: 15px;
 	line-height: 1.5;
+    overflow-x: hidden;
+}
+
+main {
+    overflow-x: hidden;
 }
 
 a { text-decoration: none; color: inherit; }
@@ -4100,4 +4105,8 @@ table.dtable th { padding: 11px 14px; }
 @media (max-width: 480px) {
 	.reviews { padding: 48px 16px; }
 	.reviews__title { font-size: 28px; }
+}
+
+#brandFilter a.active {
+	color: var(--orange);
 }

@@ -23,91 +23,7 @@
 </head>
 <body>
 	<!-- ===================== HEADER ===================== -->
-	<div class="header__topbar">
-		<div class="header__topbar-inner">
-			<a href="/" class="header__logo">
-				<img src="/img/logo.png" alt="ДВС Маркет" onerror="this.style.display='none';this.nextElementSibling.style.display='block';" />
-				<div class="header__logo-fallback" style="display:none;">ДВС <span>Маркет</span></div>
-			</a>
-			<div class="header__contacts">
-				<a href="https://yandex.com/maps/-/CPeSeDLl" target="_blank" class="header__contact-item">
-					<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-						<path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5S13.38 11.5 12 11.5z"/>
-					</svg>
-					Москва, ул. Бирюлевская 37 корп.1
-				</a>
-				<a href="mailto:star-motor@mail.ru" class="header__contact-item">
-					<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-						<path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
-					</svg>
-					star-motor@mail.ru
-				</a>
-				<a href="tel:+79263124747" class="header__contact-item">
-					<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-						<path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V20a1 1 0 01-1 1C10.61 21 3 13.39 3 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.26.2 2.47.57 3.58a1 1 0 01-.25 1.01l-2.2 2.2z"/>
-					</svg>
-					+7 926 312-47-47
-				</a>
-				<a href="tel:+79258042599" class="header__contact-item">
-					<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-						<path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V20a1 1 0 01-1 1C10.61 21 3 13.39 3 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.26.2 2.47.57 3.58a1 1 0 01-.25 1.01l-2.2 2.2z"/>
-					</svg>
-					+7 925 804-25-99
-				</a>
-			</div>
-		</div>
-	</div>
-	<nav class="header__nav" aria-label="Основная навигация">
-		<div class="header__nav-inner">
-			<ul class="nav__links">
-				<li><a href="/" class="active">Главная</a></li>
-				<li><a href="/catalog">Каталог</a></li>
-				<li><a href="/delivery">Доставка</a></li>
-				<li><a href="/contacts">Контакты</a></li>
-			</ul>
-			<!-- Social Icons -->
-			<div class="nav__socials">
-				<a href="https://t.me/+79263124747" target="_blank" aria-label="Telegram">
-					<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-						<path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12L7.17 13.23l-2.965-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.983.329z"/>
-					</svg>
-				</a>
-				<a href="https://wa.me/79263124747" target="_blank" aria-label="WhatsApp">
-					<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-						<path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21 5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zm5.52 14.15c-.23.65-1.35 1.24-1.85 1.32-.47.07-1.07.1-1.72-.11-.4-.13-.91-.3-1.56-.59-2.74-1.18-4.53-3.96-4.67-4.14-.14-.18-1.11-1.48-1.11-2.82 0-1.34.7-2 .95-2.27.23-.25.5-.31.67-.31.17 0 .34.002.49.009.16.008.37-.062.58.44.23.53.77 1.87.84 2.01.07.14.12.3.02.48-.09.18-.14.29-.28.45-.14.16-.29.36-.42.48-.14.13-.28.28-.12.54.16.26.72 1.19 1.55 1.93 1.07.95 1.97 1.25 2.24 1.39.27.14.43.12.59-.07.16-.19.68-.8.86-1.07.18-.27.36-.23.61-.14.25.09 1.58.75 1.85.88.27.14.45.2.52.31.06.12.06.69-.17 1.34z"/>
-					</svg>
-				</a>
-			</div>
-			<!-- CTA -->
-			<div class="nav__cta">
-				<button class="btn-cta" onclick="openModal()">Оставить заявку</button>
-			</div>
-			<!-- Burger (mobile) -->
-			<button class="burger" id="burger" aria-label="Открыть меню" onclick="toggleMenu()">
-				<span></span>
-				<span></span>
-				<span></span>
-			</button>
-		</div>
-		<!-- Mobile Drawer -->
-		<div class="nav__drawer" id="navDrawer">
-			<a href="/" class="active">Главная</a>
-			<a href="/catalog">Каталог</a>
-			<a href="/delivery">Доставка</a>
-			<a href="/contacts">Контакты</a>
-			<div class="nav__drawer-socials">
-				<a href="https://t.me/+79263124747" target="_blank" aria-label="Telegram">
-					<svg viewBox="0 0 24 24"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12L7.17 13.23l-2.965-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.983.329z"/></svg>
-				</a>
-				<a href="https://wa.me/79263124747" target="_blank" aria-label="WhatsApp">
-					<svg viewBox="0 0 24 24"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21 5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zm5.52 14.15c-.23.65-1.35 1.24-1.85 1.32-.47.07-1.07.1-1.72-.11-.4-.13-.91-.3-1.56-.59-2.74-1.18-4.53-3.96-4.67-4.14-.14-.18-1.11-1.48-1.11-2.82 0-1.34.7-2 .95-2.27.23-.25.5-.31.67-.31.17 0 .34.002.49.009.16.008.37-.062.58.44.23.53.77 1.87.84 2.01.07.14.12.3.02.48-.09.18-.14.29-.28.45-.14.16-.29.36-.42.48-.14.13-.28.28-.12.54.16.26.72 1.19 1.55 1.93 1.07.95 1.97 1.25 2.24 1.39.27.14.43.12.59-.07.16-.19.68-.8.86-1.07.18-.27.36-.23.61-.14.25.09 1.58.75 1.85.88.27.14.45.2.52.31.06.12.06.69-.17 1.34z"/></svg>
-				</a>
-			</div>
-			<div class="nav__drawer-cta">
-				<button class="btn-cta" onclick="openModal(); toggleMenu();">Оставить заявку</button>
-			</div>
-		</div>
-	</nav>
+	<?php include 'include/header.html'; ?>
 	<main>
 		<!-- ===================== HERO ===================== -->
 		<section class="hero">
@@ -303,11 +219,10 @@
 			<div class="categories__inner">
 				<div class="categories__header reveal reveal--fade">
 					<span class="categories__label">ДВС Маркет</span>
-					<h2 class="categories__title">На Ваш выбор, есть новые ДВС и контрактные</h2>
-					<p class="categories__subtitle">Если под Ваш авто не будет нового ДВС с Китая, мы всегда сможем подобрать для Вас лучшее решение из контрактных моторов.</p>
+					<h2 class="categories__title">На Ваш выбор, есть новые ДВС из Китая — в наличии и под заказ</h2>
+					<p class="categories__subtitle">В наличии на складе в Москве и под заказ. Каждый двигатель с ГТД, гарантией и возможностью установки.</p>
 				</div>
-				<div class="categories__grid">
-					<!-- левая карточка -->
+				<div class="categories__grid" style="display:flex; justify-content:center;">
 					<div class="cat-card cat-card--light reveal reveal--up">
 						<div class="cat-card__image">
 							<img src="/img/main/engine_new.png" alt="Новые ДВС с Китая" />
@@ -321,22 +236,6 @@
 								<li>Можем установить Вам двигатель в своем автосервисе</li>
 							</ul>
 							<a href="/catalog" class="cat-card__btn cat-card__btn--orange">Перейти к новым ДВС</a>
-						</div>
-					</div>
-					<!-- правая карточка -->
-					<div class="cat-card cat-card--dark reveal reveal--up">
-						<div class="cat-card__image">
-							<img src="/img/main/engine_used.png" alt="Контрактные ДВС из Японии и Европы" />
-						</div>
-						<div class="cat-card__body">
-							<h3 class="cat-card__title">Контрактные ДВС из Японии и Европы</h3>
-							<ul class="cat-card__list">
-								<li>Оплата всеми удобными для Вас способами</li>
-								<li>Выдаем ГТД на каждый двигатель</li>
-								<li>Гарантия на все двигатели от 60 дней</li>
-								<li>Можем установить Вам двигатель в своем автосервисе</li>
-							</ul>
-							<a href="/catalog" class="cat-card__btn cat-card__btn--dark">Перейти к контрактным ДВС</a>
 						</div>
 					</div>
 				</div>
@@ -356,35 +255,35 @@
 					<div class="products-slider__slide active">
 						<div class="products-slider__grid">
 							<div class="ps-card">
-								<div class="ps-card__img"><img src="/img/products/4G18/1.jpg" alt="Двигатель 4G18" /></div>
+								<div class="ps-card__img"><img src="/catalog/dvigatel-g4fa/img/1.jpg" alt="Двигатель G4FA" /></div>
 								<div class="ps-card__body">
-									<h3 class="ps-card__name">Двигатель 4G18 — Mitsubishi</h3>
-									<span class="ps-card__price">90 000&nbsp;₽</span>
+									<h3 class="ps-card__name">Двигатель G4FA</h3>
+									<span class="ps-card__price">84 000 ₽</span>
 									<button class="ps-card__btn" onclick="openModal()">
 										<svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 18c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm-14.5-16h-.5a1 1 0 000 2h.18l2.73 8.18A2 2 0 007 14h10a2 2 0 001.94-1.5L21 6H5.21L4.5 2zm2.5 10l-1.33-4H19l-1.67 4H7z"/></svg>
-										В корзину
+										Связаться
 									</button>
 								</div>
 							</div>
 							<div class="ps-card">
-								<div class="ps-card__img"><img src="/img/products/4G18/1.jpg" alt="Двигатель CXDA" /></div>
+								<div class="ps-card__img"><img src="/catalog/dvigatel-g4fc/img/1.jpg" alt="Двигатель G4FC" /></div>
 								<div class="ps-card__body">
-									<h3 class="ps-card__name">Двигатель CXDA — VolksWagen</h3>
-									<span class="ps-card__price">175 000&nbsp;₽</span>
+									<h3 class="ps-card__name">Двигатель G4FC</h3>
+									<span class="ps-card__price">84 000 ₽</span>
 									<button class="ps-card__btn" onclick="openModal()">
 										<svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 18c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm-14.5-16h-.5a1 1 0 000 2h.18l2.73 8.18A2 2 0 007 14h10a2 2 0 001.94-1.5L21 6H5.21L4.5 2zm2.5 10l-1.33-4H19l-1.67 4H7z"/></svg>
-										В корзину
+										Связаться
 									</button>
 								</div>
 							</div>
 							<div class="ps-card">
-								<div class="ps-card__img"><img src="/img/products/4G18/1.jpg" alt="Двигатель CTTA" /></div>
+								<div class="ps-card__img"><img src="/catalog/dvigatel-g4fg/img/1.jpg" alt="Двигатель G4FG" /></div>
 								<div class="ps-card__body">
-									<h3 class="ps-card__name">Двигатель CTTA / CCTB — VolksWagen</h3>
-									<span class="ps-card__price">165 000&nbsp;₽</span>
+									<h3 class="ps-card__name">Двигатель G4FG</h3>
+									<span class="ps-card__price">88 000 ₽</span>
 									<button class="ps-card__btn" onclick="openModal()">
 										<svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 18c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm-14.5-16h-.5a1 1 0 000 2h.18l2.73 8.18A2 2 0 007 14h10a2 2 0 001.94-1.5L21 6H5.21L4.5 2zm2.5 10l-1.33-4H19l-1.67 4H7z"/></svg>
-										В корзину
+										Связаться
 									</button>
 								</div>
 							</div>
@@ -394,35 +293,35 @@
 					<div class="products-slider__slide">
 						<div class="products-slider__grid">
 							<div class="ps-card">
-								<div class="ps-card__img"><img src="/img/products/4G18/1.jpg" alt="Двигатель CZDA" /></div>
+								<div class="ps-card__img"><img src="/catalog/dvigatel-g4ke/img/1.jpg" alt="Двигатель G4KE" /></div>
 								<div class="ps-card__body">
-									<h3 class="ps-card__name">Двигатель CZDA — Volkswagen</h3>
-									<span class="ps-card__price">135 000&nbsp;₽</span>
+									<h3 class="ps-card__name">Двигатель G4KE</h3>
+									<span class="ps-card__price">133 000 ₽</span>
 									<button class="ps-card__btn" onclick="openModal()">
 										<svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 18c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm-14.5-16h-.5a1 1 0 000 2h.18l2.73 8.18A2 2 0 007 14h10a2 2 0 001.94-1.5L21 6H5.21L4.5 2zm2.5 10l-1.33-4H19l-1.67 4H7z"/></svg>
-										В корзину
+										Связаться
 									</button>
 								</div>
 							</div>
 							<div class="ps-card">
-								<div class="ps-card__img"><img src="/img/products/4G18/1.jpg" alt="Двигатель CAVA" /></div>
+								<div class="ps-card__img"><img src="/catalog/dvigatel-g4kd/img/1.jpg" alt="Двигатель G4KD" /></div>
 								<div class="ps-card__body">
-									<h3 class="ps-card__name">Двигатель CAVA — Volkswagen</h3>
-									<span class="ps-card__price">140 000&nbsp;₽</span>
+									<h3 class="ps-card__name">Двигатель G4KD</h3>
+									<span class="ps-card__price">130 000 ₽</span>
 									<button class="ps-card__btn" onclick="openModal()">
 										<svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 18c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm-14.5-16h-.5a1 1 0 000 2h.18l2.73 8.18A2 2 0 007 14h10a2 2 0 001.94-1.5L21 6H5.21L4.5 2zm2.5 10l-1.33-4H19l-1.67 4H7z"/></svg>
-										В корзину
+										Связаться
 									</button>
 								</div>
 							</div>
 							<div class="ps-card">
-								<div class="ps-card__img"><img src="/img/products/4G18/1.jpg" alt="Двигатель CJZ" /></div>
+								<div class="ps-card__img"><img src="/catalog/dvigatel-g4kj/img/1.jpg" alt="Двигатель G4KJ" /></div>
 								<div class="ps-card__body">
-									<h3 class="ps-card__name">Двигатель CJZ, CJZA — VolksWagen, Skoda</h3>
-									<span class="ps-card__price">125 000&nbsp;₽</span>
+									<h3 class="ps-card__name">Двигатель G4KJ</h3>
+									<span class="ps-card__price">220 000 ₽</span>
 									<button class="ps-card__btn" onclick="openModal()">
 										<svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 18c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm-14.5-16h-.5a1 1 0 000 2h.18l2.73 8.18A2 2 0 007 14h10a2 2 0 001.94-1.5L21 6H5.21L4.5 2zm2.5 10l-1.33-4H19l-1.67 4H7z"/></svg>
-										В корзину
+										Связаться
 									</button>
 								</div>
 							</div>
@@ -432,35 +331,35 @@
 					<div class="products-slider__slide">
 						<div class="products-slider__grid">
 							<div class="ps-card">
-								<div class="ps-card__img"><img src="/img/products/4G18/1.jpg" alt="Двигатель G4KJ" /></div>
+								<div class="ps-card__img"><img src="/catalog/dvigatel-g4gc/img/1.jpg" alt="Двигатель G4GC" /></div>
 								<div class="ps-card__body">
-									<h3 class="ps-card__name">Двигатель G4KJ — Kia, Hyundai</h3>
-									<span class="ps-card__price">190 000&nbsp;₽</span>
+									<h3 class="ps-card__name">Двигатель G4GC</h3>
+									<span class="ps-card__price">115 000 ₽</span>
 									<button class="ps-card__btn" onclick="openModal()">
 										<svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 18c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm-14.5-16h-.5a1 1 0 000 2h.18l2.73 8.18A2 2 0 007 14h10a2 2 0 001.94-1.5L21 6H5.21L4.5 2zm2.5 10l-1.33-4H19l-1.67 4H7z"/></svg>
-										В корзину
+										Связаться
 									</button>
 								</div>
 							</div>
 							<div class="ps-card">
-								<div class="ps-card__img"><img src="/img/products/4G18/1.jpg" alt="Двигатель CVRC" /></div>
+								<div class="ps-card__img"><img src="/catalog/dvigatel-g4js/img/1.jpg" alt="Двигатель G4JS" /></div>
 								<div class="ps-card__body">
-									<h3 class="ps-card__name">Двигатель CVRC — Ford Transit RWD (Евро 5)</h3>
-									<span class="ps-card__price">275 000&nbsp;₽</span>
+									<h3 class="ps-card__name">Двигатель G4JS</h3>
+									<span class="ps-card__price">140 000 ₽</span>
 									<button class="ps-card__btn" onclick="openModal()">
 										<svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 18c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm-14.5-16h-.5a1 1 0 000 2h.18l2.73 8.18A2 2 0 007 14h10a2 2 0 001.94-1.5L21 6H5.21L4.5 2zm2.5 10l-1.33-4H19l-1.67 4H7z"/></svg>
-										В корзину
+										Связаться
 									</button>
 								</div>
 							</div>
 							<div class="ps-card">
-								<div class="ps-card__img"><img src="/img/products/4G18/1.jpg" alt="Двигатель CJZ" /></div>
+								<div class="ps-card__img"><img src="/catalog/dvigatel-f16d4/img/1.jpg" alt="Двигатель F16D4" /></div>
 								<div class="ps-card__body">
-									<h3 class="ps-card__name">Двигатель CJZ, CJZA — VolksWagen, Skoda</h3>
-									<span class="ps-card__price">125 000&nbsp;₽</span>
+									<h3 class="ps-card__name">Двигатель F16D4</h3>
+									<span class="ps-card__price">106 000 ₽</span>
 									<button class="ps-card__btn" onclick="openModal()">
 										<svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 18c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm-14.5-16h-.5a1 1 0 000 2h.18l2.73 8.18A2 2 0 007 14h10a2 2 0 001.94-1.5L21 6H5.21L4.5 2zm2.5 10l-1.33-4H19l-1.67 4H7z"/></svg>
-										В корзину
+										Связаться
 									</button>
 								</div>
 							</div>
@@ -475,7 +374,7 @@
 				</div>
 				<!-- кнопка в каталог -->
 				<div class="products-slider__footer">
-					<a href="/catalog" class="products-slider__catalog-btn">Перейти в магазин</a>
+					<a href="/catalog" class="products-slider__catalog-btn">Перейти в каталог</a>
 				</div>
 			</div>
 		</section>
@@ -488,7 +387,7 @@
 					<div class="how-to-order__badge">
 						<p>Мы даем лучшие цены и условия!</p>
 						<a href="/catalog">
-							Перейти в магазин
+							Открыть каталог
 							<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
 						</a>
 					</div>
@@ -570,251 +469,8 @@
 				</div>
 			</div>
 		</section>
-		<!-- ===== FAQ ===== -->
-		<section class="faq">
-			<div class="faq__inner">
-
-				<div class="faq__header reveal reveal--fade">
-					<h2 class="faq__title">Часто задаваемые вопросы</h2>
-					<p class="faq__subtitle">По всем интересующим Вас вопросам, обращайтесь по телефону или в мессенджерах</p>
-				</div>
-
-				<div class="faq__list">
-
-					<div class="faq__item reveal reveal--left">
-						<button class="faq__question" aria-expanded="false">
-							<span>Я нашел ДВС дешевле, почему стоит брать именно у Вас?</span>
-							<svg class="faq__icon" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"/></svg>
-						</button>
-						<div class="faq__answer">
-							<div class="faq__answer-inner">
-								В 90% случаев это двигатели, которые не соответствуют нашим требованиям качества. Такие двигатели либо приобретаются на разборках или являются контрактными, но не НОВЫМИ. Мы же предлагаем реальный новый агрегат со всеми документами напрямую от завода производителя из Китая.
-							</div>
-						</div>
-					</div>
-
-					<div class="faq__item reveal reveal--left">
-						<button class="faq__question" aria-expanded="false">
-							<span>Что входит в стоимость нового ДВС из Китая?</span>
-							<svg class="faq__icon" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"/></svg>
-						</button>
-						<div class="faq__answer">
-							<div class="faq__answer-inner">
-								В стоимость НОВОГО агрегата входят: таможенные расходы, расходы на доставку до нашего склада. Также нужно учитывать расходы на доставку до Вашего адреса, которую Вам помогут рассчитать наши менеджеры.
-							</div>
-						</div>
-					</div>
-
-					<div class="faq__item reveal reveal--left">
-						<button class="faq__question" aria-expanded="false">
-							<span>Смогу ли я поставить авто на учет с Вашим новым ДВС?</span>
-							<svg class="faq__icon" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"/></svg>
-						</button>
-						<div class="faq__answer">
-							<div class="faq__answer-inner">
-								Никаких проблем не возникнет, ведь мы предоставляем все необходимые документы для постановки на учет в комплекте с двигателем: договор купли-продажи, грузовую таможенную декларацию, диагностическую карту.
-							</div>
-						</div>
-					</div>
-
-					<div class="faq__item reveal reveal--left">
-						<button class="faq__question" aria-expanded="false">
-							<span>Есть ли у Вас моторы и коробки в наличии?</span>
-							<svg class="faq__icon" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"/></svg>
-						</button>
-						<div class="faq__answer">
-							<div class="faq__answer-inner">
-								Да, конечно, на нашем складе имеются моторы (как Б.У. так и НОВЫЕ) и коробки передач, которые можно посмотреть и купить в тот же день.
-							</div>
-						</div>
-					</div>
-
-				</div>
-			</div>
-		</section>
-		<!-- ===================== CTA BLOCK ===================== -->
-		<section class="cta-block">
-			<div class="cta-block__inner reveal reveal--right">
-				<div class="cta-block__image">
-					<img src="/img/form_footer_bg.jpg" alt="Двигатель" />
-				</div>
-				<div class="cta-block__content">
-					<div class="cta-block__label">
-						<svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.85 7h10.29l1.08 3.11H5.77L6.85 7zM19 17H5v-5h14v5zm-2-2c.55 0 1-.45 1-1s-.45-1-1-1-1 .45-1 1 .45 1 1 1zm-10 0c.55 0 1-.45 1-1s-.45-1-1-1-1 .45-1 1 .45 1 1 1z"/></svg>
-						Нужна помощь?
-					</div>
-					<h2 class="cta-block__title">Оставьте заявку и мы перезвоним Вам!</h2>
-					<form class="cta-block__form" onsubmit="handleCtaSubmit(event, '/php/form_footer.php')">
-						<input
-							type="tel"
-							name="phone"
-							id="cta-phone"
-							placeholder="+7 (___) ___-__-__"
-							required
-							autocomplete="tel"
-							maxlength="18"
-						/>
-						<button type="submit">
-							Позвонить мне
-							<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-						</button>
-					</form>
-				</div>
-			</div>
-		</section>
-		<!-- ===================== FOOTER ===================== -->
-		<footer class="footer">
-			<div class="footer__inner">
-
-				<div class="footer__col footer__col--brand">
-					<a href="/" class="footer__logo">
-						<img src="/img/logo.png" alt="ДВС Маркет" onerror="this.style.display='none';this.nextElementSibling.style.display='block';" />
-						<div class="footer__logo-fallback" style="display:none;">ДВС <span>Маркет</span></div>
-					</a>
-					<p class="footer__about"><strong>ДВС Маркет</strong> — поставщик запчастей и двигателей на рынок России</p>
-					<div class="footer__socials">
-						<a href="https://t.me/+79263124747" target="_blank" aria-label="Telegram">
-							<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12L7.17 13.23l-2.965-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.983.329z"/></svg>
-						</a>
-						<a href="https://wa.me/79263124747" target="_blank" aria-label="WhatsApp">
-							<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21 5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zm5.52 14.15c-.23.65-1.35 1.24-1.85 1.32-.47.07-1.07.1-1.72-.11-.4-.13-.91-.3-1.56-.59-2.74-1.18-4.53-3.96-4.67-4.14-.14-.18-1.11-1.48-1.11-2.82 0-1.34.7-2 .95-2.27.23-.25.5-.31.67-.31.17 0 .34.002.49.009.16.008.37-.062.58.44.23.53.77 1.87.84 2.01.07.14.12.3.02.48-.09.18-.14.29-.28.45-.14.16-.29.36-.42.48-.14.13-.28.28-.12.54.16.26.72 1.19 1.55 1.93 1.07.95 1.97 1.25 2.24 1.39.27.14.43.12.59-.07.16-.19.68-.8.86-1.07.18-.27.36-.23.61-.14.25.09 1.58.75 1.85.88.27.14.45.2.52.31.06.12.06.69-.17 1.34z"/></svg>
-						</a>
-						<a href="mailto:star-motor@mail.ru" aria-label="Email">
-							<svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
-						</a>
-					</div>
-				</div>
-
-				<div class="footer__col">
-					<h3 class="footer__heading">Реквизиты</h3>
-					<div class="footer__divider"></div>
-					<ul class="footer__list">
-						<li>ДВС Маркет</li>
-						<li>Москва, ул. Бирюлевская 37 корп.1</li>
-					</ul>
-				</div>
-
-				<div class="footer__col">
-					<h3 class="footer__heading">Карта сайта</h3>
-					<div class="footer__divider"></div>
-					<ul class="footer__nav-list">
-						<li><a href="/">Главная</a></li>
-						<li><a href="/catalog">Каталог</a></li>
-						<li><a href="/delivery">Доставка</a></li>
-						<li><a href="/contacts">Контакты</a></li>
-					</ul>
-				</div>
-
-				<div class="footer__col">
-					<h3 class="footer__heading">Контакты</h3>
-					<div class="footer__divider"></div>
-					<ul class="footer__contacts">
-						<li>
-							<svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V20a1 1 0 01-1 1C10.61 21 3 13.39 3 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.26.2 2.47.57 3.58a1 1 0 01-.25 1.01l-2.2 2.2z"/></svg>
-							<a href="tel:+79263124747">+7 926 312-47-47</a>
-						</li>
-						<li>
-							<svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V20a1 1 0 01-1 1C10.61 21 3 13.39 3 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.26.2 2.47.57 3.58a1 1 0 01-.25 1.01l-2.2 2.2z"/></svg>
-							<a href="tel:+79258042599">+7 925 804-25-99</a>
-						</li>
-						<li>
-							<svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
-							<a href="mailto:star-motor@mail.ru"><span class="__cf_email__" data-cfemail="057671647728686a716a774568646c692b7770">star-motor@mail.ru</span></a>
-						</li>
-						<li>
-							<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5S13.38 11.5 12 11.5z"/></svg>
-							<span>Склад: Москва, ул. Бирюлевская 37 корп.1</span>
-						</li>
-					</ul>
-				</div>
-
-			</div>
-
-			<div class="footer__bottom">
-				<div class="footer__bottom-inner">
-					<span>&copy; 2026 ДВС Маркет.</span>
-				</div>
-			</div>
-		</footer>
-		<!-- ===================== MODAL ===================== -->
-		<div class="modal-backdrop" id="modalBackdrop" onclick="closeModalOnBackdrop(event)">
-			<div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
-				<!-- Close -->
-				<button class="modal__close" onclick="closeModal()" aria-label="Закрыть">
-					<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M18 6L6 18M6 6l12 12"/></svg>
-				</button>
-				<!-- Left: contacts + form -->
-				<div class="modal__left">
-					<div class="modal__logo">
-						<img src="/img/logo.png" alt="ДВС Маркет" onerror="this.style.display='none';this.nextElementSibling.style.display='block';" />
-						<div class="modal__logo-fallback" style="display:none;">ДВС <span>Маркет</span></div>
-					</div>
-					<h2 class="modal__title" id="modalTitle">Контакты</h2>
-					<ul class="modal__contacts">
-						<li>
-							<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5S13.38 11.5 12 11.5z"/></svg>
-							<span>Адрес склада: г. Москва, ул. Бирюлевская 37 корп.1</span>
-						</li>
-						<li>
-							<svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V20a1 1 0 01-1 1C10.61 21 3 13.39 3 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.26.2 2.47.57 3.58a1 1 0 01-.25 1.01l-2.2 2.2z"/></svg>
-							<a href="tel:+79263124747">+7 (926) 312-47-47</a>
-						</li>
-						<li>
-							<svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V20a1 1 0 01-1 1C10.61 21 3 13.39 3 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.26.2 2.47.57 3.58a1 1 0 01-.25 1.01l-2.2 2.2z"/></svg>
-							<a href="tel:+79258042599">+7 (925) 804-25-99</a>
-						</li>
-						<li>
-							<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12L7.17 13.23l-2.965-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.983.329z"/></svg>
-							<a href="https://t.me/+79263124747" target="_blank">Telegram</a>
-						</li>
-						<li>
-							<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21 5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zm5.52 14.15c-.23.65-1.35 1.24-1.85 1.32-.47.07-1.07.1-1.72-.11-.4-.13-.91-.3-1.56-.59-2.74-1.18-4.53-3.96-4.67-4.14-.14-.18-1.11-1.48-1.11-2.82 0-1.34.7-2 .95-2.27.23-.25.5-.31.67-.31.17 0 .34.002.49.009.16.008.37-.062.58.44.23.53.77 1.87.84 2.01.07.14.12.3.02.48-.09.18-.14.29-.28.45-.14.16-.29.36-.42.48-.14.13-.28.28-.12.54.16.26.72 1.19 1.55 1.93 1.07.95 1.97 1.25 2.24 1.39.27.14.43.12.59-.07.16-.19.68-.8.86-1.07.18-.27.36-.23.61-.14.25.09 1.58.75 1.85.88.27.14.45.2.52.31.06.12.06.69-.17 1.34z"/></svg>
-							<a href="https://wa.me/79263124747" target="_blank">WhatsApp</a>
-						</li>
-					</ul>
-					<form class="modal__form" onsubmit="handleFormSubmit(event, '/php/form_modal.php')">
-						<input type="text" id="modal-name"  name="name"  placeholder="Имя"    required autocomplete="name" />
-						<input type="tel"  id="modal-phone" name="phone" placeholder="Телефон" required autocomplete="tel" />
-						<button type="submit" class="modal__submit">Отправить</button>
-					</form>
-				</div>
-				<!-- Right: image -->
-				<div class="modal__right">
-					<img src="/img/modal_engine.png" alt="Двигатель" />
-				</div>
-			</div>
-		</div>
-		<!-- ===================== FLOATING CONTACTS ===================== -->
-		<div class="floating-contacts">
-			<!-- Phone -->
-			<a href="tel:+79263124747" class="floating-contacts__btn" aria-label="Позвонить">
-				<svg viewBox="0 0 24 24">
-					<path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012.12 4.18 2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
-				</svg>
-			</a>
-
-			<div class="floating-contacts__divider"></div>
-
-			<!-- Telegram -->
-			<a href="https://t.me/+79263124747" target="_blank" class="floating-contacts__btn" aria-label="Telegram">
-				<svg viewBox="0 0 24 24">
-					<path d="M22 2L11 13"/>
-					<path d="M22 2L15 22l-4-9-9-4 20-7z"/>
-				</svg>
-			</a>
-
-			<div class="floating-contacts__divider"></div>
-
-			<!-- WhatsApp -->
-			<a href="https://wa.me/79263124747" target="_blank" class="floating-contacts__btn" aria-label="WhatsApp">
-				<svg viewBox="0 0 24 24">
-					<path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/>
-				</svg>
-			</a>
-		</div>
-		<!-- ===================== JS ===================== -->
-		<script src="/js/main.js"></script>
-		<script src="/js/form-submit.js"></script>
+		<!-- ===================== FOOTER blocks ===================== -->
+		<?php include 'include/footer.html'; ?>
 	</main>
 </body>
 </html>
