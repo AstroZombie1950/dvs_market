@@ -22,8 +22,10 @@
 	<link rel="stylesheet" href="/css/main.css">
 </head>
 <body>
-	<!-- ===================== HEADER ===================== -->
+	<!-- ===================== HEADER top ===================== -->
 	<?php include '../include/header.html'; ?>
+	<!-- ===================== HEADER bottom ===================== -->
+	<nav class="header__nav" aria-label="Основная навигация">
 		<div class="header__nav-inner">
 			<ul class="nav__links">
 				<li><a href="/">Главная</a></li>
