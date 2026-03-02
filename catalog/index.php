@@ -99,7 +99,7 @@
 					<div class="catalog__grid">
 						<div class="product-card" data-brand="hyundai kia">
 							<a href="dvigatel-g4fa" class="product-card__img-wrap">
-								<img src="/catalog/dvigatel-g4fa/img/1.jpg" alt="Двигатель G4FA" />
+								<img src="/img/products/dvigatel-g4fa/1.jpg" alt="Двигатель G4FA" />
 								<span class="product-card__badge">Распродажа!</span>
 							</a>
 							<div class="product-card__body">
@@ -113,7 +113,7 @@
 						</div>
 						<div class="product-card" data-brand="hyundai kia">
 							<a href="dvigatel-g4fc" class="product-card__img-wrap">
-								<img src="/catalog/dvigatel-g4fc/img/1.jpg" alt="Двигатель G4FC" />
+								<img src="/img/products/dvigatel-g4fc/1.jpg" alt="Двигатель G4FC" />
 								<span class="product-card__badge">Распродажа!</span>
 							</a>
 							<div class="product-card__body">
@@ -127,7 +127,7 @@
 						</div>
 						<div class="product-card" data-brand="hyundai kia">
 							<a href="dvigatel-g4fg" class="product-card__img-wrap">
-								<img src="/catalog/dvigatel-g4fg/img/1.jpg" alt="Двигатель G4FG" />
+								<img src="/img/products/dvigatel-g4fg/1.jpg" alt="Двигатель G4FG" />
 								<span class="product-card__badge">Распродажа!</span>
 							</a>
 							<div class="product-card__body">
@@ -141,7 +141,7 @@
 						</div>
 						<div class="product-card" data-brand="hyundai kia">
 							<a href="dvigatel-g4ke" class="product-card__img-wrap">
-								<img src="/catalog/dvigatel-g4ke/img/1.jpg" alt="Двигатель G4KE" />
+								<img src="/img/products/dvigatel-g4ke/1.jpg" alt="Двигатель G4KE" />
 								<span class="product-card__badge">Распродажа!</span>
 							</a>
 							<div class="product-card__body">
@@ -155,7 +155,7 @@
 						</div>
 						<div class="product-card" data-brand="hyundai kia">
 							<a href="dvigatel-g4kd" class="product-card__img-wrap">
-								<img src="/catalog/dvigatel-g4kd/img/1.jpg" alt="Двигатель G4KD" />
+								<img src="/img/products/dvigatel-g4kd/1.jpg" alt="Двигатель G4KD" />
 							</a>
 							<div class="product-card__body">
 								<a href="dvigatel-g4kd" class="product-card__name">Двигатель G4KD</a>
@@ -165,7 +165,7 @@
 						</div>
 						<div class="product-card" data-brand="hyundai kia">
 							<a href="dvigatel-g4kj" class="product-card__img-wrap">
-								<img src="/catalog/dvigatel-g4kj/img/1.jpg" alt="Двигатель G4KJ" />
+								<img src="/img/products/dvigatel-g4kj/1.jpg" alt="Двигатель G4KJ" />
 							</a>
 							<div class="product-card__body">
 								<a href="dvigatel-g4kj" class="product-card__name">Двигатель G4KJ</a>
@@ -175,7 +175,7 @@
 						</div>
 						<div class="product-card" data-brand="hyundai kia">
 							<a href="dvigatel-g4gc" class="product-card__img-wrap">
-								<img src="/catalog/dvigatel-g4gc/img/1.jpg" alt="Двигатель G4GC" />
+								<img src="/img/products/dvigatel-g4gc/1.jpg" alt="Двигатель G4GC" />
 							</a>
 							<div class="product-card__body">
 								<a href="dvigatel-g4gc" class="product-card__name">Двигатель G4GC</a>
@@ -185,7 +185,7 @@
 						</div>
 						<div class="product-card" data-brand="hyundai kia">
 							<a href="dvigatel-g4js" class="product-card__img-wrap">
-								<img src="/catalog/dvigatel-g4js/img/1.jpg" alt="Двигатель G4JS" />
+								<img src="/img/products/dvigatel-g4js/1.jpg" alt="Двигатель G4JS" />
 							</a>
 							<div class="product-card__body">
 								<a href="dvigatel-g4js" class="product-card__name">Двигатель G4JS</a>
@@ -195,7 +195,7 @@
 						</div>
 						<div class="product-card" data-brand="chevrolet">
 							<a href="dvigatel-f16d4" class="product-card__img-wrap">
-								<img src="/catalog/dvigatel-f16d4/img/1.jpg" alt="Двигатель F16D4" />
+								<img src="/img/products/dvigatel-f16d4/1.jpg" alt="Двигатель F16D4" />
 							</a>
 							<div class="product-card__body">
 								<a href="dvigatel-f16d4" class="product-card__name">Двигатель F16D4</a>
@@ -205,7 +205,7 @@
 						</div>
 						<div class="product-card" data-brand="chevrolet daewoo">
 							<a href="dvigatel-f16d3" class="product-card__img-wrap">
-								<img src="/catalog/dvigatel-f16d3/img/1.jpg" alt="Двигатель F16D3" />
+								<img src="/img/products/dvigatel-f16d3/1.jpg" alt="Двигатель F16D3" />
 							</a>
 							<div class="product-card__body">
 								<a href="dvigatel-f16d3" class="product-card__name">Двигатель F16D3</a>
@@ -215,7 +215,7 @@
 						</div>
 						<div class="product-card" data-brand="chevrolet">
 							<a href="dvigatel-f14d4" class="product-card__img-wrap">
-								<img src="/catalog/dvigatel-f14d4/img/1.jpg" alt="Двигатель F14D4" />
+								<img src="/img/products/dvigatel-f14d4/1.jpg" alt="Двигатель F14D4" />
 							</a>
 							<div class="product-card__body">
 								<a href="dvigatel-f14d4" class="product-card__name">Двигатель F14D4</a>
@@ -225,7 +225,7 @@
 						</div>
 						<div class="product-card" data-brand="opel">
 							<a href="dvigatel-z16xer" class="product-card__img-wrap">
-								<img src="/catalog/dvigatel-z16xer/img/1.jpg" alt="Двигатель Z16XER" />
+								<img src="/img/products/dvigatel-z16xer/1.jpg" alt="Двигатель Z16XER" />
 							</a>
 							<div class="product-card__body">
 								<a href="dvigatel-z16xer" class="product-card__name">Двигатель Z16XER</a>
@@ -235,7 +235,7 @@
 						</div>
 						<div class="product-card" data-brand="opel">
 							<a href="dvigatel-z18xer" class="product-card__img-wrap">
-								<img src="/catalog/dvigatel-z18xer/img/1.jpg" alt="Двигатель Z18XER" />
+								<img src="/img/products/dvigatel-z18xer/1.jpg" alt="Двигатель Z18XER" />
 							</a>
 							<div class="product-card__body">
 								<a href="dvigatel-z18xer" class="product-card__name">Двигатель Z18XER</a>
@@ -284,7 +284,7 @@
 						<div class="sidebar__hits">
 							<div class="hit-card">
 								<a href="dvigatel-g4fa" class="hit-card__img-wrap">
-									<img src="/img/products/dvigatel-g4fa/img/1.jpg" alt="Двигатель G4FA" />
+									<img src="/img/products/dvigatel-g4fa/1.jpg" alt="Двигатель G4FA" />
 								</a>
 								<div class="hit-card__body">
 									<a href="dvigatel-g4fa" class="hit-card__name">Двигатель G4FA</a>
@@ -297,7 +297,7 @@
 							</div>
 							<div class="hit-card">
 								<a href="dvigatel-g4fc" class="hit-card__img-wrap">
-									<img src="/img/products/dvigatel-g4fc/img/1.jpg" alt="Двигатель G4FC" />
+									<img src="/img/products/dvigatel-g4fc/1.jpg" alt="Двигатель G4FC" />
 								</a>
 								<div class="hit-card__body">
 									<a href="dvigatel-g4fc" class="hit-card__name">Двигатель G4FC</a>
@@ -310,7 +310,7 @@
 							</div>
 							<div class="hit-card">
 								<a href="dvigatel-g4fg" class="hit-card__img-wrap">
-									<img src="/img/products/dvigatel-g4fg/img/1.jpg" alt="Двигатель G4FG" />
+									<img src="/img/products/dvigatel-g4fg/1.jpg" alt="Двигатель G4FG" />
 								</a>
 								<div class="hit-card__body">
 									<a href="dvigatel-g4fg" class="hit-card__name">Двигатель G4FG</a>
@@ -323,7 +323,7 @@
 							</div>
 							<div class="hit-card">
 								<a href="dvigatel-g4ke" class="hit-card__img-wrap">
-									<img src="/img/products/dvigatel-g4ke/img/1.jpg" alt="Двигатель G4KE" />
+									<img src="/img/products/dvigatel-g4ke/1.jpg" alt="Двигатель G4KE" />
 								</a>
 								<div class="hit-card__body">
 									<a href="dvigatel-g4ke" class="hit-card__name">Двигатель G4KE</a>
