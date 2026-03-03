@@ -92,8 +92,8 @@
 						<svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.85 7h10.29l1.08 3.11H5.77L6.85 7zM19 17H5v-5h14v5zm-2-2c.55 0 1-.45 1-1s-.45-1-1-1-1 .45-1 1 .45 1 1 1zm-10 0c.55 0 1-.45 1-1s-.45-1-1-1-1 .45-1 1 .45 1 1 1z"/></svg>
 						Доставка по всей России
 					</div>
-					<h1 class="hero__title">Продажа новых автомобильных двигателей из Китая</h1>
-					<p class="hero__text">Мы поставляем оригинальные и неоригинальные двигатели из Китая под заказ с гарантией. Это новые моторы, прошедшие заводские испытания и контроль качества. Двигатели в упаковке, без следов эксплуатации.</p>
+					<h1 class="hero__title">Продажа новых автомобильных двигателей</h1>
+					<p class="hero__text">Мы поставляем оригинальные и неоригинальные двигатели под заказ с гарантией. Это новые моторы, прошедшие заводские испытания и контроль качества. Двигатели в упаковке, без следов эксплуатации.</p>
 					<button class="hero__btn" onclick="openModal()">
 						Оставить заявку
 						<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
@@ -271,16 +271,16 @@
 			<div class="categories__inner">
 				<div class="categories__header reveal reveal--fade">
 					<span class="categories__label">ДВС Маркет</span>
-					<h2 class="categories__title">На Ваш выбор, есть новые ДВС из Китая — в наличии и под заказ</h2>
+					<h2 class="categories__title">На Ваш выбор, есть новые ДВС — в наличии и под заказ</h2>
 					<p class="categories__subtitle">В наличии на складе в Москве и под заказ. Каждый двигатель с гарантией и возможностью установки.</p>
 				</div>
 				<div class="categories__grid" style="display:flex; justify-content:center;">
 					<div class="cat-card cat-card--light reveal reveal--up">
 						<div class="cat-card__image">
-							<img src="/img/main/engine_new.png" alt="Новые ДВС из Китая" />
+							<img src="/img/main/engine_new.png" alt="Новые ДВС" />
 						</div>
 						<div class="cat-card__body">
-							<h3 class="cat-card__title">Новые ДВС из Китая</h3>
+							<h3 class="cat-card__title">Новые ДВС</h3>
 							<ul class="cat-card__list">
 								<li>Оплата всеми удобными для Вас способами</li>
 								<li>Гарантия на все двигатели от 180 дней</li>
@@ -297,7 +297,7 @@
 			<div class="products-slider__inner">
 				<div class="products-slider__header">
 					<span class="products-slider__label">Цены</span>
-					<h2 class="products-slider__title">Новые двигатели из Китая под любой автомобиль</h2>
+					<h2 class="products-slider__title">Новые двигатели под любой автомобиль</h2>
 					<p class="products-slider__subtitle">Больше ассортимента двигателей во вкладке «Каталог»</p>
 				</div>
 				<!-- слайды -->
@@ -497,21 +497,21 @@
 				<!-- карточки -->
 				<div class="reviews__grid">
 					<div class="review-card reveal reveal--up">
-						<p class="review-card__text">Заказывал двигатель на Nissan Qashqai. Получил подробную консультацию, менеджер всегда был на связи, общение очень вежливое. Сергей всё подробно объяснил, прислал фотографии двигателя — чувствуется честный и прозрачный подход. Мотор уже прошёл более 6 000 км, никаких дефектов не обнаружено. В ближайшее время планирую заказывать двигатель ER6. Рекомендую!</p>
+						<p class="review-card__text">Заказывал двигатель на Kia Rio. Получил подробную консультацию, менеджер всегда был на связи, общение очень вежливое. Сергей всё подробно объяснил, прислал фотографии двигателя — чувствуется честный и прозрачный подход. Мотор уже прошёл более 6 000 км, никаких дефектов не обнаружено. Рекомендую!</p>
 						<div class="review-card__author">
 							<img src="/img/main/reviews/1.png" alt="Евгений Н." />
 							<span>Евгений Н.</span>
 						</div>
 					</div>
 					<div class="review-card reveal reveal--up">
-						<p class="review-card__text">Добрый день! Спасибо за мотор. Покупали двигатель на BMW X3 — работает отлично. Уже проехали 8 000 км без каких-либо проблем. Отдельная благодарность менеджеру Виктору и мастерам за профессионализм. Будем рекомендовать вас знакомым!</p>
+						<p class="review-card__text">Добрый день! Спасибо за мотор. Покупали двигатель на Хендай — работает отлично. Уже проехали 8 000 км без каких-либо проблем. Отдельная благодарность менеджеру Виктору и мастерам за профессионализм. Будем рекомендовать вас знакомым!</p>
 						<div class="review-card__author">
 							<img src="/img/main/reviews/2.png" alt="Мария К." />
 							<span>Мария К.</span>
 						</div>
 					</div>
 					<div class="review-card reveal reveal--up">
-						<p class="review-card__text">Купил двигатель на Honda Accord, установили — всё работает отлично, нареканий нет. Доставили быстро, упаковка целая, документы в порядке. Спасибо за помощь и профессиональный подход!</p>
+						<p class="review-card__text">Купил двигатель на Оптиму, установили — всё работает отлично, нареканий нет. Доставили быстро, упаковка целая, документы в порядке. Спасибо за помощь и профессиональный подход!</p>
 						<div class="review-card__author">
 							<img src="/img/main/reviews/3.png" alt="Денис Ф." />
 							<span>Денис Ф.</span>
