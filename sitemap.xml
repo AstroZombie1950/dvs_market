@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+	<!-- Главная -->
+	<url>
+		<loc>https://market-dvs.ru/</loc>
+		<changefreq>weekly</changefreq>
+		<priority>1.0</priority>
+	</url>
+
+	<!-- Основные страницы -->
+	<url>
+		<loc>https://market-dvs.ru/catalog/</loc>
+		<changefreq>weekly</changefreq>
+		<priority>0.9</priority>
+	</url>
+
+	<url>
+		<loc>https://market-dvs.ru/delivery/</loc>
+		<changefreq>monthly</changefreq>
+		<priority>0.7</priority>
+	</url>
+
+	<url>
+		<loc>https://market-dvs.ru/contacts/</loc>
+		<changefreq>monthly</changefreq>
+		<priority>0.7</priority>
+	</url>
+
+	<!-- Двигатели -->
+	<url>
+		<loc>https://market-dvs.ru/catalog/dvigatel-f14d4/</loc>
+		<changefreq>monthly</changefreq>
+		<priority>0.8</priority>
+	</url>
+
+	<url>
+		<loc>https://market-dvs.ru/catalog/dvigatel-f16d3/</loc>
+		<changefreq>monthly</changefreq>
+		<priority>0.8</priority>
+	</url>
+
+	<url>
+		<loc>https://market-dvs.ru/catalog/dvigatel-f16d4/</loc>
+		<changefreq>monthly</changefreq>
+		<priority>0.8</priority>
+	</url>
+
+	<url>
+		<loc>https://market-dvs.ru/catalog/dvigatel-g4fa/</loc>
+		<changefreq>monthly</changefreq>
+		<priority>0.8</priority>
+	</url>
+
+	<url>
+		<loc>https://market-dvs.ru/catalog/dvigatel-g4fc/</loc>
+		<changefreq>monthly</changefreq>
+		<priority>0.8</priority>
+	</url>
+
+	<url>
+		<loc>https://market-dvs.ru/catalog/dvigatel-g4fg/</loc>
+		<changefreq>monthly</changefreq>
+		<priority>0.8</priority>
+	</url>
+
+	<url>
+		<loc>https://market-dvs.ru/catalog/dvigatel-g4gc/</loc>
+		<changefreq>monthly</changefreq>
+		<priority>0.8</priority>
+	</url>
+
+	<url>
+		<loc>https://market-dvs.ru/catalog/dvigatel-g4js/</loc>
+		<changefreq>monthly</changefreq>
+		<priority>0.8</priority>
+	</url>
+
+	<url>
+		<loc>https://market-dvs.ru/catalog/dvigatel-g4kd/</loc>
+		<changefreq>monthly</changefreq>
+		<priority>0.8</priority>
+	</url>
+
+	<url>
+		<loc>https://market-dvs.ru/catalog/dvigatel-g4ke/</loc>
+		<changefreq>monthly</changefreq>
+		<priority>0.8</priority>
+	</url>
+
+	<url>
+		<loc>https://market-dvs.ru/catalog/dvigatel-g4kj/</loc>
+		<changefreq>monthly</changefreq>
+		<priority>0.8</priority>
+	</url>
+
+	<url>
+		<loc>https://market-dvs.ru/catalog/dvigatel-z16xer/</loc>
+		<changefreq>monthly</changefreq>
+		<priority>0.8</priority>
+	</url>
+
+	<url>
+		<loc>https://market-dvs.ru/catalog/dvigatel-z18xer/</loc>
+		<changefreq>monthly</changefreq>
+		<priority>0.8</priority>
+	</url>
+
+</urlset>

@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+Disallow: /include/
+Disallow: /php/
+
+Sitemap: https://market-dvs.ru/sitemap.xml
