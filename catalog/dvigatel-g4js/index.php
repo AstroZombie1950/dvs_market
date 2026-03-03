@@ -181,6 +181,8 @@
 						<p>Наши преимущества:<br>
 						— Наша компания реализовала и установила более 3000 Новых двигателей<br>
 						— Большой опыт. Наша компания на рынке с 2020 г.<br>
+						— Проверка каждого ДВС перед отправкой на специальном стенде (горячий запуск)<br>
+						— Видео запуска каждого ДВС<br>
 						— Работаем по договору<br>
 						— Во многих городах у нас имеются сервис партнёры, которые могут вам качественно установить двигатель.<br>
 						— Привезем под заказ любой ДВИГАТЕЛЬ НИЖЕ РЫНКА</p>
@@ -209,6 +211,14 @@
 							<li>
 								<svg viewBox="0 0 24 24" width="18" height="18"><circle cx="12" cy="12" r="12" fill="#e77b3d"/><path d="M7 12.5l3.5 3.5 6.5-7" stroke="#111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
 								Лучшие цены
+							</li>
+							<li>
+								<svg viewBox="0 0 24 24" width="18" height="18"><circle cx="12" cy="12" r="12" fill="#e77b3d"/><path d="M7 12.5l3.5 3.5 6.5-7" stroke="#111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+								Проверка каждого ДВС перед отправкой на специальном стенде (горячий запуск)
+							</li>
+							<li>
+								<svg viewBox="0 0 24 24" width="18" height="18"><circle cx="12" cy="12" r="12" fill="#e77b3d"/><path d="M7 12.5l3.5 3.5 6.5-7" stroke="#111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+								Видео запуска каждого ДВС
 							</li>
 							<li>
 								<svg viewBox="0 0 24 24" width="18" height="18"><circle cx="12" cy="12" r="12" fill="#e77b3d"/><path d="M7 12.5l3.5 3.5 6.5-7" stroke="#111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
