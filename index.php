@@ -92,7 +92,7 @@
 						<svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.85 7h10.29l1.08 3.11H5.77L6.85 7zM19 17H5v-5h14v5zm-2-2c.55 0 1-.45 1-1s-.45-1-1-1-1 .45-1 1 .45 1 1 1zm-10 0c.55 0 1-.45 1-1s-.45-1-1-1-1 .45-1 1 .45 1 1 1z"/></svg>
 						Доставка по всей России
 					</div>
-					<h1 class="hero__title">Продажа новых автомобильных двигателей с Китая</h1>
+					<h1 class="hero__title">Продажа новых автомобильных двигателей из Китая</h1>
 					<p class="hero__text">Мы поставляем оригинальные и неоригинальные двигатели из Китая под заказ с гарантией. Это новые моторы, прошедшие заводские испытания и контроль качества. Двигатели в упаковке, без следов эксплуатации.</p>
 					<button class="hero__btn" onclick="openModal()">
 						Оставить заявку
@@ -133,7 +133,7 @@
 						О компании
 					</div>
 					<h2 class="about__title">Магазин двигателей<br>ДВС Маркет</h2>
-					<p class="about__text">Данный сайт предназначен для тех, кто ищет новые двигатели для своих автомобилей. Также у нас работают дополнительные направления, где мы привозим «под ключ» контрактные ДВС с Европы и Японии. Если Вам нужен новый или контрактный двигатель — оставьте заявку, наши менеджеры подберут для Вас лучшее предложение!</p>
+					<p class="about__text">Данный сайт предназначен для тех, кто ищет новые двигатели для своих автомобилей — оставьте заявку, наши менеджеры подберут для Вас лучшее предложение!</p>
 					<div class="about__founder">
 						<img src="/img/main/ceo.png" alt="Руководитель ДВС Маркет" />
 						<div class="about__founder-info">
@@ -154,7 +154,7 @@
 						</div>
 						<div class="about__feature-body">
 							<h3>Большой опыт</h3>
-							<p>Наша компания на рынке с 2015 г. Работаем по договору с гарантией на ДВС.</p>
+							<p>Наша компания на рынке с 2020 г. Работаем по договору с гарантией на ДВС.</p>
 						</div>
 					</div>
 					<div class="about__feature">
@@ -162,8 +162,8 @@
 							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 4h6a4 4 0 0 1 0 8H7V4z"/><path d="M7 12h8"/><path d="M7 16h8"/><line x1="7" y1="4" x2="7" y2="20"/></svg>
 						</div>
 						<div class="about__feature-body">
-							<h3>Лучшие цены на ДВС</h3>
-							<p>Нашли ДВС за меньшую стоимость? Мы привезем дешевле!</p>
+							<h3>Конкурентные цены на ДВС</h3>
+							<p>Мы следим за рынком и стремимся поддерживать доступную цену для покупателей.</p>
 						</div>
 					</div>
 					<div class="about__feature">
@@ -250,16 +250,16 @@
 					<img src="/img/main/engine_replace.jpg" alt="Установка двигателя" />
 				</div>
 				<div class="engine-replace__content reveal reveal--right">
-					<h2 class="engine-replace__title">Можем установить Вам двигатель в своем автосервисе</h2>
+					<h2 class="engine-replace__title">Можем установить Вам двигатель в партнерском автосервисе</h2>
 					<p class="engine-replace__text">Замените агрегат целиком, вместо длительного ремонта. Мы предлагаем для Вас широкий ассортимент новых двигателей с заводской гарантией, номерные с пакетом документов.</p>
 					<div class="engine-replace__divider"></div>
 					<div class="engine-replace__stats">
 						<div class="engine-replace__stat">
-							<span class="engine-replace__num" data-target="9" data-suffix="">0</span>
+							<span class="engine-replace__num" data-target="7" data-suffix="">0</span>
 							<span class="engine-replace__label">Лет на рынке</span>
 						</div>
 						<div class="engine-replace__stat">
-							<span class="engine-replace__num" data-target="1000" data-suffix="+">0</span>
+							<span class="engine-replace__num" data-target="3000" data-suffix="+">0</span>
 							<span class="engine-replace__label">ДВС доставлено для клиентов</span>
 						</div>
 					</div>
@@ -272,20 +272,19 @@
 				<div class="categories__header reveal reveal--fade">
 					<span class="categories__label">ДВС Маркет</span>
 					<h2 class="categories__title">На Ваш выбор, есть новые ДВС из Китая — в наличии и под заказ</h2>
-					<p class="categories__subtitle">В наличии на складе в Москве и под заказ. Каждый двигатель с ГТД, гарантией и возможностью установки.</p>
+					<p class="categories__subtitle">В наличии на складе в Москве и под заказ. Каждый двигатель с гарантией и возможностью установки.</p>
 				</div>
 				<div class="categories__grid" style="display:flex; justify-content:center;">
 					<div class="cat-card cat-card--light reveal reveal--up">
 						<div class="cat-card__image">
-							<img src="/img/main/engine_new.png" alt="Новые ДВС с Китая" />
+							<img src="/img/main/engine_new.png" alt="Новые ДВС из Китая" />
 						</div>
 						<div class="cat-card__body">
-							<h3 class="cat-card__title">Новые ДВС с Китая</h3>
+							<h3 class="cat-card__title">Новые ДВС из Китая</h3>
 							<ul class="cat-card__list">
 								<li>Оплата всеми удобными для Вас способами</li>
-								<li>Выдаем ГТД на каждый двигатель</li>
-								<li>Гарантия на все двигатели от 60 дней</li>
-								<li>Можем установить Вам двигатель в своем автосервисе</li>
+								<li>Гарантия на все двигатели от 180 дней</li>
+								<li>Можем установить Вам двигатель в партнерском автосервисе</li>
 							</ul>
 							<a href="/catalog" class="cat-card__btn cat-card__btn--orange">Перейти к новым ДВС</a>
 						</div>
@@ -471,7 +470,7 @@
 							<div class="hto-step__num">03</div>
 							<div class="hto-step__body">
 								<h3>Составление договора и оплата</h3>
-								<p>Оплата всеми удобными для Вас способами. Можем установить двигатель в своем автосервисе.</p>
+								<p>Оплата всеми удобными для Вас способами. Можем установить двигатель в партнерском автосервисе.</p>
 							</div>
 						</div>
 					</div>
