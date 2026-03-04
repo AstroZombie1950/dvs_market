@@ -96,23 +96,23 @@
 				<!-- левая колонка: галерея + цена + преимущества -->
 				<div class="product-gallery">
 					<div class="product-gallery__main">
-						<img id="mainImg" src="/img/products/dvigatel-f14d4/1.jpg" alt="двигатель F14D4 — Chevrolet" />
+						<img id="mainImg" src="/img/products/dvigatel-f14d4/1.jpg" alt="Двигатель F14D4" />
 						<button class="product-gallery__zoom" onclick="openLightbox()" aria-label="Увеличить">
 							<svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg>
 						</button>
 					</div>
 					<div class="product-gallery__thumbs">
 						<div class="product-gallery__thumb active" onclick="setImg(this, '/img/products/dvigatel-f14d4/1.jpg')">
-							<img src="/img/products/dvigatel-f14d4/1.jpg" alt="двигатель F14D4 — Chevrolet" />
+							<img src="/img/products/dvigatel-f14d4/1.jpg" alt="Двигатель F14D4" />
 						</div>
 						<div class="product-gallery__thumb" onclick="setImg(this, '/img/products/dvigatel-f14d4/2.jpg')">
-							<img src="/img/products/dvigatel-f14d4/2.jpg" alt="двигатель F14D4 — Chevrolet" />
+							<img src="/img/products/dvigatel-f14d4/2.jpg" alt="f14d4 мотор" />
 						</div>
 						<div class="product-gallery__thumb" onclick="setImg(this, '/img/products/dvigatel-f14d4/3.jpg')">
-							<img src="/img/products/dvigatel-f14d4/3.jpg" alt="двигатель F14D4 — Chevrolet" />
+							<img src="/img/products/dvigatel-f14d4/3.jpg" alt="шевроле f14d4" />
 						</div>
 						<div class="product-gallery__thumb" onclick="setImg(this, '/img/products/dvigatel-f14d4/4.jpg')">
-							<img src="/img/products/dvigatel-f14d4/4.jpg" alt="двигатель F14D4 — Chevrolet" />
+							<img src="/img/products/dvigatel-f14d4/4.jpg" alt="f14d4 chevrolet" />
 						</div>
 					</div>
 					<div class="product-gallery__price-block">
@@ -250,9 +250,7 @@
 		<section class="product-description">
 			<div class="product-description__inner">
 				<h2 class="product-description__title">Описание</h2>
-				<p class="product-description__text">
-					4-х цилиндровый двигатель F14D4 объёмом 1.4 л устанавливается на автомобили Chevrolet. Новый агрегат поставляется с полным комплектом документов и готов к установке.
-				</p>
+				<p class="product-description__text">Двигатель F14D4 — бензиновый 4-х цилиндровый агрегат объёмом 1.4 л, который устанавливается на автомобили Chevrolet и часто выбирается как практичное решение для замены, когда важны предсказуемая установка и стабильная работа после ремонта. При заказе важно учитывать не только индекс, но и комплектацию: у разных годов выпуска могут отличаться навесное оборудование, разъёмы, датчики и мелкие посадочные элементы. Поэтому перед оформлением мы сверяем данные по VIN и уточняем, что именно нужно под вашу машину, чтобы установка прошла без переделок и лишних расходов.<br>Если вам нужен f14d4 двигатель без пробега, имеет смысл заранее проверить маркировку и комплектность — так проще подтвердить соответствие и спокойно планировать установку. Перед отправкой можно согласовать фото и видео, чтобы заранее увидеть маркировку и состояние узла, а также как упакован двигатель для перевозки. В переписке часто встречаются запросы “куплю двигатель f14d4” или “купить f14d4” — в таких случаях мы сначала уточняем VIN, затем подтверждаем нужную модификацию и согласуем детали отгрузки.<br>F14D4 мотор обычно берут, когда нужно быстро вернуть автомобиль в рабочее состояние и получить прогнозируемый результат после установки. Условия гарантии и доставка по России уточняются при оформлении заказа — подскажем оптимальный вариант под ваш регион и удобный способ получения.</p>
 				<!-- Таблица совместимости -->
 				<h3 class="product-description__title" style="font-size:16px; margin-bottom:12px;">Марки/модели автомобилей</h3>
 				<table class="spec-table" style="margin-bottom:8px;">
@@ -376,41 +374,6 @@
 		</section>
 		<!-- ===================== FOOTER blocks ===================== -->
 		<?php include '../../include/footer_product.html'; ?>
-		<script>
-			/* переключение главного изображения */
-			function setImg(thumb, src) {
-				const img = document.getElementById('mainImg');
-				img.style.animation = 'none';
-				img.offsetHeight;
-				img.style.animation = '';
-				img.src = src;
-				document.querySelectorAll('.product-gallery__thumb').forEach(t => t.classList.remove('active'));
-				thumb.classList.add('active');
-			}
-
-			/* лайтбокс */
-			function openLightbox() {
-				const src = document.getElementById('mainImg').src;
-				document.getElementById('lightboxImg').src = src;
-				document.getElementById('lightbox').classList.add('open');
-				document.body.style.overflow = 'hidden';
-			}
-
-			function closeLightbox(e) {
-				if (e && e.target !== document.getElementById('lightbox') && !e.target.closest('.lightbox__close')) return;
-				document.getElementById('lightbox').classList.remove('open');
-				document.body.style.overflow = '';
-			}
-
-			document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox({}); });
-
-			/* счётчик количества */
-			function changeQty(delta) {
-				const input = document.getElementById('qtyInput');
-				const val = Math.max(1, Math.min(99, parseInt(input.value || 1) + delta));
-				input.value = val;
-			}
-		</script>
 	</main>
 </body>
 </html>

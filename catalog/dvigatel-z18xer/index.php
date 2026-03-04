@@ -95,23 +95,23 @@
             <div class="product__inner">
                 <div class="product-gallery">
                     <div class="product-gallery__main">
-                        <img id="mainImg" src="/img/products/dvigatel-z18xer/1.jpg" alt="двигатель Z18XER" />
+                        <img id="mainImg" src="/img/products/dvigatel-z18xer/1.jpg" alt="Двигатель Z18XER" />
 						<button class="product-gallery__zoom" onclick="openLightbox()" aria-label="Увеличить">
 							<svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg>
 						</button>
                     </div>
                     <div class="product-gallery__thumbs">
                         <div class="product-gallery__thumb active" onclick="setImg(this, '/img/products/dvigatel-z18xer/1.jpg')">
-                            <img src="/img/products/dvigatel-z18xer/1.jpg" alt="двигатель Z18XER" />
+                            <img src="/img/products/dvigatel-z18xer/1.jpg" alt="Двигатель Z18XER" />
                         </div>
                         <div class="product-gallery__thumb" onclick="setImg(this, '/img/products/dvigatel-z18xer/2.jpg')">
-                            <img src="/img/products/dvigatel-z18xer/2.jpg" alt="двигатель Z18XER" />
+                            <img src="/img/products/dvigatel-z18xer/2.jpg" alt="z18xer мотор" />
                         </div>
                         <div class="product-gallery__thumb" onclick="setImg(this, '/img/products/dvigatel-z18xer/3.jpg')">
-                            <img src="/img/products/dvigatel-z18xer/3.jpg" alt="двигатель Z18XER" />
+                            <img src="/img/products/dvigatel-z18xer/3.jpg" alt="опель z18xer" />
                         </div>
                         <div class="product-gallery__thumb" onclick="setImg(this, '/img/products/dvigatel-z18xer/4.jpg')">
-                            <img src="/img/products/dvigatel-z18xer/4.jpg" alt="двигатель Z18XER" />
+                            <img src="/img/products/dvigatel-z18xer/4.jpg" alt="z18xer opel" />
                         </div>
                     </div>
                     <div class="product-gallery__price-block">
@@ -239,9 +239,7 @@
         <section class="product-description">
             <div class="product-description__inner">
                 <h2 class="product-description__title">Описание</h2>
-                <p class="product-description__text">
-                    4-х цилиндровый двигатель Z18XER объёмом 1.8 л устанавливается на автомобили Opel. Новый агрегат поставляется с полным комплектом документов и готов к установке.
-                </p>
+                <p class="product-description__text">Двигатель Z18XER — бензиновый 4-х цилиндровый агрегат объёмом 1.8 л, который устанавливается на автомобили Opel и часто выбирается как понятное решение для замены, когда важны предсказуемая установка и стабильная работа после ремонта. При заказе важно учитывать не только индекс, но и комплектацию: у разных годов выпуска могут отличаться навесное оборудование, разъёмы, датчики и мелкие посадочные элементы. Поэтому перед оформлением мы сверяем данные по VIN и уточняем, что именно нужно под ваш автомобиль, чтобы установка прошла без переделок и лишних расходов.<br>Если вам нужен z18xer двигатель без пробега, имеет смысл заранее проверить маркировку и комплектность — так проще подтвердить соответствие и спокойно планировать установку. Перед отправкой можно согласовать фото и видео, чтобы заранее увидеть маркировку и состояние узла, а также как упакован двигатель для перевозки. В переписке часто встречаются запросы “куплю двигатель z18xer” или “купить z18xer” — в таких случаях мы сначала уточняем VIN, затем подтверждаем нужную модификацию и согласуем детали отгрузки.<br>Z18XER мотор обычно берут, когда нужно быстро вернуть автомобиль в рабочее состояние и получить прогнозируемый результат после установки. Условия гарантии и доставка по России уточняются при оформлении заказа — подскажем оптимальный вариант под ваш регион и удобный способ получения.</p>
 				<h3 class="product-description__title" style="font-size:16px; margin-bottom:12px;">Марки/модели автомобилей</h3>
                 <table class="spec-table" style="margin-bottom:8px;">
                     <tr><td>Опель Z18XER / Z18XER Opel</td><td>Z18XER</td></tr>

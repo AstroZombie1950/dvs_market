@@ -94,26 +94,26 @@
         <section class="product">
             <div class="product__inner">
                 <div class="product-gallery">
-                    <div class="product-gallery__main">
-                        <img id="mainImg" src="/img/products/dvigatel-g4ke/1.jpg" alt="двигатель G4KE — Hyundai/Kia" />
+					<div class="product-gallery__main">
+						<img id="mainImg" src="/img/products/dvigatel-g4ke/1.jpg" alt="Двигатель G4KE" />
 						<button class="product-gallery__zoom" onclick="openLightbox()" aria-label="Увеличить">
 							<svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg>
 						</button>
-                    </div>
-                    <div class="product-gallery__thumbs">
-                        <div class="product-gallery__thumb active" onclick="setImg(this, '/img/products/dvigatel-g4ke/1.jpg')">
-                            <img src="/img/products/dvigatel-g4ke/1.jpg" alt="двигатель G4KE — Hyundai/Kia" />
-                        </div>
-                        <div class="product-gallery__thumb" onclick="setImg(this, '/img/products/dvigatel-g4ke/2.jpg')">
-                            <img src="/img/products/dvigatel-g4ke/2.jpg" alt="двигатель G4KE — Hyundai/Kia" />
-                        </div>
-                        <div class="product-gallery__thumb" onclick="setImg(this, '/img/products/dvigatel-g4ke/3.jpg')">
-                            <img src="/img/products/dvigatel-g4ke/3.jpg" alt="двигатель G4KE — Hyundai/Kia" />
-                        </div>
-                        <div class="product-gallery__thumb" onclick="setImg(this, '/img/products/dvigatel-g4ke/4.jpg')">
-                            <img src="/img/products/dvigatel-g4ke/4.jpg" alt="двигатель G4KE — Hyundai/Kia" />
-                        </div>
-                    </div>
+					</div>
+					<div class="product-gallery__thumbs">
+						<div class="product-gallery__thumb active" onclick="setImg(this, '/img/products/dvigatel-g4ke/1.jpg')">
+							<img src="/img/products/dvigatel-g4ke/1.jpg" alt="Двигатель G4KE" />
+						</div>
+						<div class="product-gallery__thumb" onclick="setImg(this, '/img/products/dvigatel-g4ke/2.jpg')">
+							<img src="/img/products/dvigatel-g4ke/2.jpg" alt="g4ke мотор" />
+						</div>
+						<div class="product-gallery__thumb" onclick="setImg(this, '/img/products/dvigatel-g4ke/3.jpg')">
+							<img src="/img/products/dvigatel-g4ke/3.jpg" alt="киа g4ke" />
+						</div>
+						<div class="product-gallery__thumb" onclick="setImg(this, '/img/products/dvigatel-g4ke/4.jpg')">
+							<img src="/img/products/dvigatel-g4ke/4.jpg" alt="g4ke kia" />
+						</div>
+					</div>
                     <div class="product-gallery__price-block">
                         <div class="product-gallery__price">133 000 ₽</div>
 						<div class="product-gallery__actions">
@@ -239,9 +239,7 @@
         <section class="product-description">
             <div class="product-description__inner">
                 <h2 class="product-description__title">Описание</h2>
-                <p class="product-description__text">
-                    4-х цилиндровый двигатель G4KE объёмом 2.4 л относится к семейству Theta и устанавливается на автомобили Hyundai и Kia. Новый агрегат поставляется с полным комплектом документов и готов к установке.
-                </p>
+                <p class="product-description__text">Двигатель G4KE — бензиновый агрегат объёмом 2.4 л семейства Theta, который ставится на ряд моделей Hyundai и Kia и часто выбирается как готовое решение для замены без длительного ремонта. Перед подбором мы сверяем совместимость по VIN и уточняем комплектацию, чтобы исключить ошибки по креплениям, навесному оборудованию и датчикам — это экономит время при установке и помогает избежать лишних затрат. Если вам нужен g4ke двигатель без пробега, важно заранее проверить маркировку, комплектность и наличие документов: так проще подтвердить соответствие и спокойно вводить мотор в эксплуатацию.<br>Мы подскажем, что имеет смысл согласовать до отправки: фото/видео подтверждение, упаковку, условия гарантии и нюансы доставки. Многие клиенты приходят с запросом купить g4ke, когда хотят получить узел в сборе и быстро вернуть автомобиль в работу. Если вы пишете “куплю двигатель g4ke”, мы уточним требования и предложим подходящий вариант под конкретный автомобиль. Также можно подобрать g4ke мотор с документами и гарантией, а стоимость и сроки доставки согласуем при оформлении заказа.</p>
 				<h3 class="product-description__title" style="font-size:16px; margin-bottom:12px;">Марки/модели автомобилей</h3>
                 <table class="spec-table" style="margin-bottom:8px;">
                     <tbody>

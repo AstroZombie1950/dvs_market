@@ -96,23 +96,23 @@
 				<!-- левая колонка: галерея + цена + преимущества -->
 				<div class="product-gallery">
 					<div class="product-gallery__main">
-						<img id="mainImg" src="/img/products/dvigatel-g4fc/1.jpg" alt="двигатель G4FC — Hyundai/Kia" />
+						<img id="mainImg" src="/img/products/dvigatel-g4fc/1.jpg" alt="Двигатель G4FC" />
 						<button class="product-gallery__zoom" onclick="openLightbox()" aria-label="Увеличить">
 							<svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg>
 						</button>
 					</div>
 					<div class="product-gallery__thumbs">
 						<div class="product-gallery__thumb active" onclick="setImg(this, '/img/products/dvigatel-g4fc/1.jpg')">
-							<img src="/img/products/dvigatel-g4fc/1.jpg" alt="двигатель G4FC — Hyundai/Kia" />
+							<img src="/img/products/dvigatel-g4fc/1.jpg" alt="Двигатель G4FC" />
 						</div>
 						<div class="product-gallery__thumb" onclick="setImg(this, '/img/products/dvigatel-g4fc/2.jpg')">
-							<img src="/img/products/dvigatel-g4fc/2.jpg" alt="двигатель G4FC — Hyundai/Kia" />
+							<img src="/img/products/dvigatel-g4fc/2.jpg" alt="g4fc мотор" />
 						</div>
 						<div class="product-gallery__thumb" onclick="setImg(this, '/img/products/dvigatel-g4fc/3.jpg')">
-							<img src="/img/products/dvigatel-g4fc/3.jpg" alt="двигатель G4FC — Hyundai/Kia" />
+							<img src="/img/products/dvigatel-g4fc/3.jpg" alt="киа g4fc" />
 						</div>
 						<div class="product-gallery__thumb" onclick="setImg(this, '/img/products/dvigatel-g4fc/4.jpg')">
-							<img src="/img/products/dvigatel-g4fc/4.jpg" alt="двигатель G4FC — Hyundai/Kia" />
+							<img src="/img/products/dvigatel-g4fc/4.jpg" alt="g4fc kia" />
 						</div>
 					</div>
 					<div class="product-gallery__price-block">
@@ -250,9 +250,7 @@
 		<section class="product-description">
 			<div class="product-description__inner">
 				<h2 class="product-description__title">Описание</h2>
-				<p class="product-description__text">
-					4-х цилиндровый двигатель G4FC объёмом 1.6 л относится к семейству Gamma и устанавливается на автомобили Hyundai и Kia. Новый агрегат поставляется с полным комплектом документов и готов к установке.
-				</p>
+				<p class="product-description__text">Двигатель G4FC — популярный бензиновый агрегат объёмом 1.6 л, который часто выбирают как готовое решение для замены, когда важны предсказуемая установка и стабильная работа. Перед подбором мы сверяем совместимость по VIN и уточняем комплектацию, чтобы исключить ошибки по креплениям, навесному оборудованию и датчикам. Если вам нужен g4fc двигатель без пробега, имеет смысл заранее проверить маркировку, комплектность и наличие документов — это ускоряет установку и снижает риски при дальнейшем обслуживании.<br>Мы подскажем, на что обратить внимание до отправки: состояние узлов, упаковку, возможность фото/видео подтверждения, а также условия гарантии и логистики. Многие клиенты приходят с запросом купить g4fc, потому что хотят получить узел в сборе и быстро вернуть автомобиль в работу без затяжного ремонта. Если вы пишете “куплю двигатель g4fc”, мы уточним требования и предложим подходящий вариант под ваш запрос. Также можно подобрать g4fc мотор с документами и гарантией, а детали по доставке согласуем заранее.</p>
 				<!-- Таблица совместимости -->
 				<h3 class="product-description__title" style="font-size:16px; margin-bottom:12px;">Марки/модели автомобилей</h3>
 				<table class="spec-table" style="margin-bottom:8px;">
@@ -381,41 +379,6 @@
 		</section>
 		<!-- ===================== FOOTER blocks ===================== -->
 		<?php include '../../include/footer_product.html'; ?>
-		<script>
-			/* переключение главного изображения */
-			function setImg(thumb, src) {
-				const img = document.getElementById('mainImg');
-				img.style.animation = 'none';
-				img.offsetHeight;
-				img.style.animation = '';
-				img.src = src;
-				document.querySelectorAll('.product-gallery__thumb').forEach(t => t.classList.remove('active'));
-				thumb.classList.add('active');
-			}
-
-			/* лайтбокс */
-			function openLightbox() {
-				const src = document.getElementById('mainImg').src;
-				document.getElementById('lightboxImg').src = src;
-				document.getElementById('lightbox').classList.add('open');
-				document.body.style.overflow = 'hidden';
-			}
-
-			function closeLightbox(e) {
-				if (e && e.target !== document.getElementById('lightbox') && !e.target.closest('.lightbox__close')) return;
-				document.getElementById('lightbox').classList.remove('open');
-				document.body.style.overflow = '';
-			}
-
-			document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox({}); });
-
-			/* счётчик количества */
-			function changeQty(delta) {
-				const input = document.getElementById('qtyInput');
-				const val = Math.max(1, Math.min(99, parseInt(input.value || 1) + delta));
-				input.value = val;
-			}
-		</script>
 	</main>
 </body>
 </html>
