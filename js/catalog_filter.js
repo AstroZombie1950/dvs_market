@@ -1,55 +1,40 @@
 /* ===== Фильтр каталога по бренду ===== */
 (function () {
-	const cards     = document.querySelectorAll('.product-card');
-	const links     = document.querySelectorAll('#brandFilter a[data-brand]');
-	const countEl   = document.getElementById('catalogCount');
-	const total     = cards.length;
+	const cards   = document.querySelectorAll('.brand-card');
+	const links   = document.querySelectorAll('#brandFilter a[data-brand]');
+	const grid    = document.querySelector('.brand-grid');
 
-	/* считаем и проставляем счётчики в сайдбаре */
-	links.forEach(function (link) {
-		const brand = link.dataset.brand;
-		const count = [...cards].filter(function (c) {
-			return c.dataset.brand.split(' ').includes(brand);
-		}).length;
-		link.querySelector('span').textContent = '(' + count + ')';
-	});
+	/* плашка пустой выдачи */
+	const empty = document.createElement('p');
+	empty.className = 'brand-grid__empty';
+	empty.textContent = 'Двигателей для этой марки пока нет в каталоге.';
+	empty.style.display = 'none';
+	grid.after(empty);
 
-	/* обновляем строку "Отображение X–Y из Z" */
-	function updateCount(visible) {
-		if (visible === total) {
-			countEl.textContent = 'Отображение 1–' + total + ' из ' + total;
-		} else {
-			countEl.textContent = 'Отображение 1–' + visible + ' из ' + total;
-		}
-	}
-
-	/* фильтрация */
+	/* фильтрация — показываем только нужную карточку */
 	function filterBy(brand) {
 		let visible = 0;
 		cards.forEach(function (card) {
-			const brands = card.dataset.brand.split(' ');
-			const show   = brands.includes(brand);
+			const show = card.dataset.brand === brand;
 			card.style.display = show ? '' : 'none';
 			if (show) visible++;
 		});
-		updateCount(visible);
+		empty.style.display = visible === 0 ? '' : 'none';
 	}
 
+	/* сброс — показываем все */
 	function resetFilter() {
 		cards.forEach(function (card) { card.style.display = ''; });
-		updateCount(total);
 		links.forEach(function (l) { l.classList.remove('active'); });
-		/* убираем кнопку сброса */
-		const resetBtn = document.getElementById('filterReset');
-		if (resetBtn) resetBtn.style.display = 'none';
+		empty.style.display = 'none';
 	}
 
-	/* клик по марке */
+	/* клик по марке в сайдбаре */
 	links.forEach(function (link) {
 		link.addEventListener('click', function (e) {
 			e.preventDefault();
 
-			/* если кликнули по уже активной — сбрасываем */
+			/* повторный клик по активной — сброс */
 			if (this.classList.contains('active')) {
 				resetFilter();
 				return;
@@ -58,20 +43,6 @@
 			links.forEach(function (l) { l.classList.remove('active'); });
 			this.classList.add('active');
 			filterBy(this.dataset.brand);
-
-			/* показываем кнопку сброса */
-			const resetBtn = document.getElementById('filterReset');
-			if (resetBtn) resetBtn.style.display = '';
 		});
 	});
-
-	/* кнопка "Показать все" */
-	const resetBtn = document.getElementById('filterReset');
-	if (resetBtn) {
-		resetBtn.style.display = 'none';
-		resetBtn.addEventListener('click', function (e) {
-			e.preventDefault();
-			resetFilter();
-		});
-	}
 })();

@@ -318,3 +318,98 @@ initPhoneMask('ctam-phone');
 		});
 	});
 })();
+
+/* --- Dropdown (desktop) --- */
+(function () {
+	var dropdowns = document.querySelectorAll('.nav__dropdown');
+
+	dropdowns.forEach(function (dropdown) {
+		var trigger = dropdown.querySelector('.nav__dropdown-trigger');
+
+		trigger.addEventListener('click', function (e) {
+			e.stopPropagation();
+			var isOpen = dropdown.classList.contains('open');
+
+			/* Закрываем все остальные */
+			dropdowns.forEach(function (d) {
+				d.classList.remove('open');
+				d.querySelector('.nav__dropdown-trigger').setAttribute('aria-expanded', 'false');
+			});
+
+			/* Togglem текущий */
+			if (!isOpen) {
+				dropdown.classList.add('open');
+				trigger.setAttribute('aria-expanded', 'true');
+			}
+		});
+	});
+
+	/* Клик вне — закрываем всё */
+	document.addEventListener('click', function () {
+		dropdowns.forEach(function (d) {
+			d.classList.remove('open');
+			d.querySelector('.nav__dropdown-trigger').setAttribute('aria-expanded', 'false');
+		});
+	});
+})();
+
+/* --- Accordion (drawer) --- */
+(function () {
+	var accordions = document.querySelectorAll('.nav__drawer-accordion');
+
+	accordions.forEach(function (accordion) {
+		var trigger = accordion.querySelector('.nav__drawer-accordion-trigger');
+		var list = accordion.querySelector('.nav__drawer-accordion-list');
+
+		trigger.addEventListener('click', function () {
+			var isOpen = accordion.classList.contains('open');
+
+			/* Закрываем остальные */
+			accordions.forEach(function (a) {
+				a.classList.remove('open');
+				a.querySelector('.nav__drawer-accordion-trigger').setAttribute('aria-expanded', 'false');
+				a.querySelector('.nav__drawer-accordion-list').style.maxHeight = null;
+			});
+
+			/* Togglem текущий */
+			if (!isOpen) {
+				accordion.classList.add('open');
+				trigger.setAttribute('aria-expanded', 'true');
+				list.style.maxHeight = list.scrollHeight + 'px';
+			}
+		});
+	});
+})();
+
+/* --- Active nav link --- */
+(function () {
+	/* Убираем trailing slash, кроме корня */
+	function normPath(p) {
+		return p === '/' ? '/' : p.replace(/\/$/, '');
+	}
+
+	var current = normPath(window.location.pathname);
+
+	/* Все ссылки в десктопном меню, выпадашках и drawer */
+	var links = document.querySelectorAll('.nav__links a, .nav__dropdown-list a, .nav__drawer a:not(.nav__drawer-socials a)');
+
+	links.forEach(function (link) {
+		var href = normPath(new URL(link.href).pathname);
+
+		if (href === current) {
+			link.classList.add('active');
+
+			/* Если в выпадашке — активируем и триггер */
+			var dropdown = link.closest('.nav__dropdown');
+			if (dropdown) {
+				dropdown.querySelector('.nav__dropdown-trigger').classList.add('active');
+			}
+
+			/* Если в аккордеоне drawer — активируем и триггер */
+			var accordion = link.closest('.nav__drawer-accordion');
+			if (accordion) {
+				accordion.querySelector('.nav__drawer-accordion-trigger').classList.add('active');
+			}
+		}
+	});
+})();

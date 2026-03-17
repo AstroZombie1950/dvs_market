@@ -24,7 +24,7 @@
 </head>
 <body>
 	<!-- ===================== HEADER top ===================== -->
-	<?php include '../../include/header.html'; ?>
+	<?php include($_SERVER['DOCUMENT_ROOT'].'/include/header.html'); ?>
 	<!-- ===================== HEADER bottom ===================== -->
 	<nav class="header__nav" aria-label="Основная навигация">
 		<div class="header__nav-inner">
@@ -355,7 +355,7 @@
 				</div>
             </div>
         </section>
-        <?php include '../../include/footer_product.html'; ?>
+		<?php include($_SERVER['DOCUMENT_ROOT'].'/include/footer_no_faq.html'); ?>
     </main>
 </body>
 </html>
