@@ -4,10 +4,10 @@
  *
  * Результат:
  * [
- *   'Kia' => [
- *     'Rio' => [
- *       'II' => [
- *         ['slug' => '...', 'engine' => 'G4EE'],
+ *   'Марка' => [
+ *     'Модель' => [
+ *       'Поколение' => [
+ *         ['slug' => '...', 'engine' => 'G4FA'],
  *         ...
  *       ],
  *     ],
@@ -18,29 +18,21 @@ function build_catalog_tree(array $data): array {
 	$tree = [];
 
 	foreach ($data as $row) {
-		$brand      = trim($row['Марка авто']      ?? '');
-		$model      = trim($row['Модель авто']     ?? '');
-		$generation = trim($row['Поколение авто']  ?? '');
-		$engine     = trim($row['Номер ДВС']       ?? '');
-		$slug       = trim($row['SLUG']            ?? '');
+		$brand      = trim($row['Марка авто']     ?? '');
+		$model      = trim($row['Модель авто']    ?? '');
+		$generation = trim($row['Поколение авто'] ?? '');
+		$engine     = trim($row['Номер ДВС']      ?? '');
+		$slug       = trim($row['SLUG']           ?? '');
 
 		// Пропускаем строки без обязательных полей
 		if (!$brand || !$model || !$generation || !$engine) {
 			continue;
 		}
 
-		// Инициализируем уровни если ещё нет
-		if (!isset($tree[$brand])) {
-			$tree[$brand] = [];
-		}
-		if (!isset($tree[$brand][$model])) {
-			$tree[$brand][$model] = [];
-		}
-		if (!isset($tree[$brand][$model][$generation])) {
-			$tree[$brand][$model][$generation] = [];
-		}
+		if (!isset($tree[$brand]))                        $tree[$brand] = [];
+		if (!isset($tree[$brand][$model]))                $tree[$brand][$model] = [];
+		if (!isset($tree[$brand][$model][$generation]))   $tree[$brand][$model][$generation] = [];
 
-		// Добавляем двигатель в поколение
 		$tree[$brand][$model][$generation][] = [
 			'engine' => $engine,
 			'slug'   => $slug,
@@ -60,9 +52,7 @@ function build_catalog_tree(array $data): array {
 function to_slug(string $str): string {
 	$str = mb_strtolower(trim($str));
 	$str = str_replace(' ', '-', $str);
-	// убираем всё кроме латиницы, цифр и дефиса
 	$str = preg_replace('/[^a-z0-9\-]/u', '', $str);
-	// убираем двойные дефисы
 	$str = preg_replace('/-+/', '-', $str);
 	return trim($str, '-');
 }
@@ -76,28 +66,32 @@ function from_slug(string $slug, array $keys): ?string {
 }
 
 /**
- * Рендерит HTML карточек для текущего уровня каталога.
- * Вызывается из index.php и вставляется в #catalog-grid.
+ * Рендерит HTML карточек для текущего уровня.
+ * Вставляется в #catalog-grid в index.php.
+ *
+ * Уровни:
+ * brands       → /catalog/               карточки марок,     теги = модели
+ * brands_detail → /catalog/kia/          карточки моделей,   теги = поколения
+ * models       → /catalog/kia/rio/       карточки поколений, теги = двигатели
+ * generations  → /catalog/kia/rio/iii/   карточки двигателей → /product/
  */
-function render_catalog_html(array $tree, string $level, ?string $brand, ?string $model): string {
+function render_catalog_html(array $tree, string $level, ?string $brand, ?string $model, ?string $generation): string {
 	$html = '';
 
 	if ($level === 'brands') {
-		$html .= render_brands($tree);
-	} elseif ($level === 'generations' && $brand) {
-		$html .= render_models($tree, $brand);
-	} elseif ($level === 'engines' && $brand && $model) {
-		$html .= render_generations($tree, $brand, $model);
+		$html = render_brands($tree);
+	} elseif ($level === 'brands_detail' && $brand) {
+		$html = render_models($tree, $brand);
+	} elseif ($level === 'models' && $brand && $model) {
+		$html = render_generations($tree, $brand, $model);
+	} elseif ($level === 'generations' && $brand && $model && $generation) {
+		$html = render_engines($tree, $brand, $model, $generation);
 	}
 
-	if (!$html) {
-		$html = '<p class="brand-grid__empty">Каталог пуст</p>';
-	}
-
-	return $html;
+	return $html ?: '<p class="brand-grid__empty">Каталог пуст</p>';
 }
 
-// Карточки марок с тегами моделей
+// /catalog/ — карточки марок, теги = модели (ведут на /catalog/марка/модель/)
 function render_brands(array $tree): string {
 	$html = '';
 	foreach ($tree as $brand => $models) {
@@ -106,27 +100,29 @@ function render_brands(array $tree): string {
 			$url   = '/catalog/' . to_slug($brand) . '/' . to_slug($model) . '/';
 			$tags .= '<li><a href="' . $url . '">' . htmlspecialchars($model) . '</a></li>';
 		}
-		$html .= render_card(htmlspecialchars($brand), $tags);
+		$brand_url = '/catalog/' . to_slug($brand) . '/';
+		$html .= render_card(htmlspecialchars($brand), $tags, $brand_url);
 	}
 	return $html;
 }
 
-// Карточки моделей с тегами поколений
+// /catalog/марка/ — карточки моделей, теги = поколения (ведут на /catalog/марка/модель/поколение/)
 function render_models(array $tree, string $brand): string {
 	$html   = '';
 	$models = $tree[$brand] ?? [];
 	foreach ($models as $model => $generations) {
 		$tags = '';
 		foreach (array_keys($generations) as $gen) {
-			$url   = '/catalog/' . to_slug($brand) . '/' . to_slug($model) . '/';
+			$url   = '/catalog/' . to_slug($brand) . '/' . to_slug($model) . '/' . to_slug($gen) . '/';
 			$tags .= '<li><a href="' . $url . '">' . htmlspecialchars($gen) . '</a></li>';
 		}
-		$html .= render_card(htmlspecialchars($model), $tags);
+		$model_url = '/catalog/' . to_slug($brand) . '/' . to_slug($model) . '/';
+		$html .= render_card(htmlspecialchars($model), $tags, $model_url);
 	}
 	return $html;
 }
 
-// Карточки поколений с тегами двигателей
+// /catalog/марка/модель/ — карточки поколений, теги = двигатели (ведут на /product/)
 function render_generations(array $tree, string $brand, string $model): string {
 	$html        = '';
 	$generations = $tree[$brand][$model] ?? [];
@@ -134,19 +130,37 @@ function render_generations(array $tree, string $brand, string $model): string {
 		$tags = '';
 		foreach ($engines as $item) {
 			if ($item['slug']) {
-				$url   = '/product/index.php?slug=' . urlencode($item['slug']);
+				$url = '/product/' . $item['slug'];
 				$tags .= '<li><a href="' . $url . '">' . htmlspecialchars($item['engine']) . '</a></li>';
 			} else {
 				$tags .= '<li><span class="brand-card__tag--soon">' . htmlspecialchars($item['engine']) . '</span></li>';
 			}
 		}
-		$html .= render_card(htmlspecialchars($gen), $tags);
+		$gen_url = '/catalog/' . to_slug($brand) . '/' . to_slug($model) . '/' . to_slug($gen) . '/';
+		$html .= render_card(htmlspecialchars($gen), $tags, $gen_url);
+	}
+	return $html;
+}
+
+// /catalog/марка/модель/поколение/ — карточки двигателей → /product/
+function render_engines(array $tree, string $brand, string $model, string $generation): string {
+	$html    = '';
+	$engines = $tree[$brand][$model][$generation] ?? [];
+	foreach ($engines as $item) {
+		$tags = '';
+		if ($item['slug']) {
+			$url = '/product/' . $item['slug'];
+			$tags .= '<li><a href="' . $url . '">' . htmlspecialchars($item['engine']) . '</a></li>';
+		} else {
+			$tags .= '<li><span class="brand-card__tag--soon">Скоро в наличии</span></li>';
+		}
+		$html .= render_card(htmlspecialchars($item['engine']), $tags, $item['slug'] ? '/product/' . $item['slug'] : '');
 	}
 	return $html;
 }
 
 // Шаблон одной карточки
-function render_card(string $title, string $tags_html): string {
+function render_card(string $title, string $tags_html, string $link_url = ''): string {
 	return '
 		<div class="brand-card">
 			<div class="brand-card__top"></div>

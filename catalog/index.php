@@ -16,22 +16,22 @@ $tree = build_catalog_tree($raw);
 
 // Определяем текущий уровень
 $level = 'brands';
-if ($url_brand && $url_model && $url_generation) $level = 'engines';
+if ($url_brand && $url_model && $url_generation) $level = 'generations';
 elseif ($url_brand && $url_model)                $level = 'models';
-elseif ($url_brand)                              $level = 'generations';
+elseif ($url_brand)                              $level = 'brands_detail';
 
 // Резолвим реальные названия из slug
-$brand      = $url_brand      ? from_slug($url_brand,      array_keys($tree))                          : null;
-$model      = $url_model      ? from_slug($url_model,      array_keys($tree[$brand] ?? []))            : null;
-$generation = $url_generation ? from_slug($url_generation, array_keys($tree[$brand][$model] ?? []))    : null;
+$brand      = $url_brand      ? from_slug($url_brand,      array_keys($tree))                       : null;
+$model      = $url_model      ? from_slug($url_model,      array_keys($tree[$brand] ?? []))         : null;
+$generation = $url_generation ? from_slug($url_generation, array_keys($tree[$brand][$model] ?? [])) : null;
 
 // Передаём дерево и начальное состояние в JS
 $tree_json  = json_encode($tree, JSON_UNESCAPED_UNICODE);
 $state_json = json_encode([
-    'level'      => $level,
-    'brand'      => $brand,
-    'model'      => $model,
-    'generation' => $generation,
+	'level'      => $level,
+	'brand'      => $brand,
+	'model'      => $model,
+	'generation' => $generation,
 ], JSON_UNESCAPED_UNICODE);
 ?>
 <!DOCTYPE html>
@@ -79,8 +79,8 @@ $state_json = json_encode([
 			<div class="catalog__inner">
 				<div class="catalog__content">
 					<!-- сетка карточек -->
-					 <div class="brand-grid" id="catalog-grid">
-						<?= render_catalog_html($tree, $level, $brand, $model) ?>
+					<div class="brand-grid" id="catalog-grid">
+						<?= render_catalog_html($tree, $level, $brand, $model, $generation) ?>
 					</div>
 				</div>
 			</div>
