@@ -4,14 +4,14 @@
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>INSERT_TITLE</title>
-	<meta name="description" content="INSERT_DESC"/>
-	<meta name="keywords" content="INSERT_KEYS"/>
-	<meta name="author" content="INSERT_AUTHOR"/>
+	<meta name="description" content="INSERT_META_DESC"/>
+	<meta name="keywords" content="INSERT_KEYWORDS"/>
+	<meta name="author" content="ДВС Маркет"/>
 	<meta name="robots" content="index, follow"/>
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
 	<!-- Open Graph -->
 	<meta property="og:title" content="INSERT_TITLE" />
-	<meta property="og:description" content="INSERT_DESC" />
+	<meta property="og:description" content="INSERT_OG_DESC" />
 	<meta property="og:type" content="website" />
 	<meta property="og:locale" content="ru_RU" />
 	<!-- Fonts -->
@@ -178,7 +178,13 @@
                     <span class="breadcrumbs__sep"></span>
                     <a href="/catalog">Каталог</a>
                     <span class="breadcrumbs__sep"></span>
-                    <span class="breadcrumbs__current">Двигатель INSERT_MODEL_NAME</span>
+                    <a href="/catalog/xxx">INSERT_CAR_BRAND</a>
+                    <span class="breadcrumbs__sep"></span>
+                    <a href="/catalog/xxx/xxx">INSERT_CAR_MODEL</a>
+                    <span class="breadcrumbs__sep"></span>
+                    <a href="/catalog/xxx/xxx/xxx">INSERT_CAR_GENERATION</a>
+                    <span class="breadcrumbs__sep"></span>
+                    <span class="breadcrumbs__current">Двигатель INSERT_ENGINE_MODEL_NAME</span>
                 </nav>
             </div>
         </section>
@@ -187,23 +193,23 @@
             <div class="product__inner">
                 <div class="product-gallery">
                     <div class="product-gallery__main">
-                        <img id="mainImg" src="/img/products/dvigatel-INSERT_MODEL_NAME/1.jpg" alt="Двигатель INSERT_MODEL_NAME" />
+                        <img id="mainImg" src="INSERT_ENGINE_IMG_1" alt="Двигатель INSERT_ENGINE_MODEL_NAME" />
 						<button class="product-gallery__zoom" onclick="openLightbox()" aria-label="Увеличить">
 							<svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg>
 						</button>
                     </div>
                     <div class="product-gallery__thumbs">
-                        <div class="product-gallery__thumb active" onclick="setImg(this, '/img/products/dvigatel-INSERT_MODEL_NAME/1.jpg')">
-                            <img src="/img/products/dvigatel-INSERT_MODEL_NAME/1.jpg" alt="Двигатель INSERT_MODEL_NAME" />
+                        <div class="product-gallery__thumb active" onclick="setImg(this, 'INSERT_ENGINE_IMG_1')">
+                            <img src="INSERT_ENGINE_IMG_1" alt="Двигатель INSERT_ENGINE_MODEL_NAME" />
                         </div>
-                        <div class="product-gallery__thumb" onclick="setImg(this, '/img/products/dvigatel-INSERT_MODEL_NAME/2.jpg')">
-                            <img src="/img/products/dvigatel-INSERT_MODEL_NAME/2.jpg" alt="INSERT_MODEL_NAME мотор" />
+                        <div class="product-gallery__thumb" onclick="setImg(this, 'INSERT_ENGINE_IMG_2')">
+                            <img src="INSERT_ENGINE_IMG_2" alt="INSERT_ENGINE_MODEL_NAME мотор" />
                         </div>
-                        <div class="product-gallery__thumb" onclick="setImg(this, '/img/products/dvigatel-INSERT_MODEL_NAME/3.jpg')">
-                            <img src="/img/products/dvigatel-INSERT_MODEL_NAME/3.jpg" alt="INSERT_CAR_MODEL INSERT_MODEL_NAME" />
+                        <div class="product-gallery__thumb" onclick="setImg(this, 'INSERT_ENGINE_IMG_3')">
+                            <img src="INSERT_ENGINE_IMG_3" alt="INSERT_CAR_MODEL INSERT_ENGINE_MODEL_NAME" />
                         </div>
-                        <div class="product-gallery__thumb" onclick="setImg(this, '/img/products/dvigatel-INSERT_MODEL_NAME/4.jpg')">
-                            <img src="/img/products/dvigatel-INSERT_MODEL_NAME/4.jpg" alt="INSERT_MODEL_NAME INSERT_CAR_MODEL" />
+                        <div class="product-gallery__thumb" onclick="setImg(this, 'INSERT_ENGINE_IMG_4')">
+                            <img src="INSERT_ENGINE_IMG_4" alt="INSERT_ENGINE_MODEL_NAME INSERT_CAR_MODEL" />
                         </div>
                     </div>
                     <div class="product-gallery__price-block">
@@ -254,17 +260,17 @@
 					</div>
                 </div>
                 <div class="product-info">
-                    <h1 class="product-info__title">Двигатель INSERT_MODEL_NAME — INSERT_CAR_MODEL</h1>
+                    <h1 class="product-info__title">Двигатель INSERT_ENGINE_MODEL_NAME — INSERT_CAR_BRAND INSERT_CAR_MODEL INSERT_CAR_GENERATION поколение</h1>
                     <div class="product-info__specs">
-                        <p class="product-info__spec">Двигатель INSERT_MODEL_NAME</p>
-                        <p class="product-info__spec">Объём — INSERT_ENG_VOLUME</p>
-                        <p class="product-info__spec">Мощность — INSERT_ENG_HP л.с.</p>
-                        <p class="product-info__spec">Тип двигателя — INSERT_ENG_TYPE</p>
+                        <p class="product-info__spec">Двигатель INSERT_ENGINE_MODEL_NAME</p>
+                        <p class="product-info__spec">Объём — INSERT_ENGINE_VOLUME</p>
+                        <p class="product-info__spec">Мощность — INSERT_ENGINE_HP л.с.</p>
+                        <p class="product-info__spec">Тип двигателя — INSERT_ENGINE_TYPE</p>
                         <p class="product-info__spec"><strong>Стоимость двигатель под заказ — по запросу, по наличию — по запросу.</strong></p>
                         <p class="product-info__spec">Новый двигатель БЕЗ ПРОБЕГА, с заводской ГАРАНТИЕЙ и с ДОКУМЕНТАМИ!</p>
                     </div>
 					<div class="product-info__desc">
-						<p>INSERT_ENG_DESC</p>
+						<p>INSERT_ENGINE_SHORT_DESC</p>
 					</div>
 					<div class="product-info__block">
 						<h3 class="product-info__block-title">Доставка</h3>
@@ -319,30 +325,25 @@
         <section class="product-description">
             <div class="product-description__inner">
                 <h2 class="product-description__title">Описание</h2>
-                <p class="product-description__text">INSERT_ENG_DESC</p>
+                <p class="product-description__text">INSERT_ENGINE_DESC</p>
 				<h3 class="product-description__title" style="font-size:16px; margin-bottom:12px;">Марки/модели автомобилей</h3>
                 <table class="spec-table" style="margin-bottom:8px;">
-                    <tr><td>INSERT_CAR_MODEL INSERT_MODEL_NAME / INSERT_MODEL_NAME INSERT_CAR_MODEL</td><td>INSERT_MODEL_NAME</td></tr>
-                    <tr><td>INSERT_CAR_MODEL INSERT_MODEL_NAME / INSERT_MODEL_NAME INSERT_CAR_MODEL</td><td>INSERT_MODEL_NAME</td></tr>
-                    <tr><td>INSERT_CAR_MODEL INSERT_MODEL_NAME / INSERT_MODEL_NAME INSERT_CAR_MODEL</td><td>INSERT_MODEL_NAME</td></tr>
-                    <tr><td>INSERT_CAR_MODEL INSERT_MODEL_NAME / INSERT_MODEL_NAME INSERT_CAR_MODEL</td><td>INSERT_MODEL_NAME</td></tr>
-                    <tr><td>INSERT_CAR_MODEL INSERT_MODEL_NAME / INSERT_MODEL_NAME INSERT_CAR_MODEL</td><td>INSERT_MODEL_NAME</td></tr>
+                    <tr><td>INSERT_CAR_BRAND / INSERT_CAR_MODEL / INSERT_CAR_GENERATIONL</td><td>INSERT_ENGINE_MODEL_NAME</td></tr>
                 </table>
 				<p style="font-size:13px; color:#666; margin-bottom:32px;">Точное соответствие зависит от года выпуска и комплектации — проверим по VIN.</p>
                 <h3 class="product-description__title" style="font-size:16px; margin-bottom:12px;">Характеристики</h3>
                 <table class="spec-table">
-                    <tr><td>Тип</td><td>INSERT_ENG_TYPE</td></tr>
-                    <tr><td>Кол-во цилиндров</td><td>INSERT_ENG_PAR_NUM_1</td></tr>
-                    <tr><td>Кол-во клапанов</td><td>INSERT_ENG_PAR_NUM_2</td></tr>
-                    <tr><td>Точный объём</td><td>INSERT_ENG_PAR_NUM_3 см³</td></tr>
-                    <tr><td>Диаметр цилиндра</td><td>INSERT_ENG_PAR_NUM_4 мм</td></tr>
-                    <tr><td>Ход поршня</td><td>INSERT_ENG_PAR_NUM_5 мм</td></tr>
-                    <tr><td>Система питания</td><td>INSERT_ENG_PAR_NUM_6</td></tr>
-                    <tr><td>Мощность</td><td>INSERT_ENG_PAR_NUM_7 л.с.</td></tr>
-                    <tr><td>Крутящий момент</td><td>INSERT_ENG_PAR_NUM_8 Нм</td></tr>
-                    <tr><td>Степень сжатия</td><td>INSERT_ENG_PAR_NUM_9</td></tr>
-                    <tr><td>Тип топлива</td><td>INSERT_ENG_PAR_NUM_10</td></tr>
-                    <tr><td>Экологические нормы</td><td>INSERT_ENG_PAR_NUM_11</td></tr>
+                    <tr><td>Тип</td><td>INSERT_ENGINE_TYPE</td></tr>
+                    <tr><td>Кол-во клапанов</td><td>INSERT_ENGINE_NUM_VALVES</td></tr>
+                    <tr><td>Точный объём</td><td>INSERT_ENGINE_VALUE_EXT см³</td></tr>
+                    <tr><td>Диаметр цилиндра</td><td>INSERT_ENG_CYL_DIA мм</td></tr>
+                    <tr><td>Ход поршня</td><td>INSERT_ENGINE_PISTON_STROKE мм</td></tr>
+                    <tr><td>Система питания</td><td>INSERT_ENGINE_POWER_TYPE</td></tr>
+                    <tr><td>Мощность</td><td>INSERT_ENGINE_HP л.с.</td></tr>
+                    <tr><td>Крутящий момент</td><td>INSERT_ENGINE_TORQUE Нм</td></tr>
+                    <tr><td>Степень сжатия</td><td>INSERT_ENGINE_COMP_RATIO</td></tr>
+                    <tr><td>Тип топлива</td><td>INSERT_ENGINE_FUEL_TYPE</td></tr>
+                    <tr><td>Экологические нормы</td><td>INSERT_ENGINE_ECO_TYPE</td></tr>
                 </table>
             </div>
         </section>
@@ -364,29 +365,29 @@
 					<!-- вопросы из документа -->
 					<div class="faq__item reveal reveal--left">
 						<button class="faq__question" aria-expanded="false">
-							<span>На какие автомобили подходит двигатель INSERT_MODEL_NAME?</span>
+							<span>На какие автомобили подходит двигатель INSERT_ENGINE_MODEL_NAME?</span>
 							<svg class="faq__icon" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"/></svg>
 						</button>
 						<div class="faq__answer">
-							<div class="faq__answer-inner">INSERT_ANSWER</div>
+							<div class="faq__answer-inner">INSERT_ANSWER_1</div>
 						</div>
 					</div>
 					<div class="faq__item reveal reveal--left">
 						<button class="faq__question" aria-expanded="false">
-							<span>Какие документы идут вместе с двигателем INSERT_MODEL_NAME?</span>
+							<span>Какие документы идут вместе с двигателем INSERT_ENGINE_MODEL_NAME?</span>
 							<svg class="faq__icon" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"/></svg>
 						</button>
 						<div class="faq__answer">
-							<div class="faq__answer-inner">INSERT_ANSWER</div>
+							<div class="faq__answer-inner">INSERT_ANSWER_2</div>
 						</div>
 					</div>
 					<div class="faq__item reveal reveal--left">
 						<button class="faq__question" aria-expanded="false">
-							<span>Какая гарантия на новый двигатель INSERT_MODEL_NAME и как проходит доставка?</span>
+							<span>Какая гарантия на новый двигатель INSERT_ENGINE_MODEL_NAME и как проходит доставка?</span>
 							<svg class="faq__icon" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"/></svg>
 						</button>
 						<div class="faq__answer">
-							<div class="faq__answer-inner">INSERT_ANSWER</div>
+							<div class="faq__answer-inner">INSERT_ANSWER_3</div>
 						</div>
 					</div>
 					<!-- типовые вопросы -->

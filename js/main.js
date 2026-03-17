@@ -85,12 +85,12 @@ document.addEventListener('DOMContentLoaded', function () {
 				}
 			});
 		},
-		{ threshold: 0.15 }
+		{ threshold: 0.05, rootMargin: '0px 0px -40px 0px' }
 	);
 
 	/* 80мс между каждым элементом для stagger-эффекта */
 	items.forEach((el, i) => {
-		el.dataset.delay = i * 80;
+		el.dataset.delay = i * 10;
 		observer.observe(el);
 	});
 })();

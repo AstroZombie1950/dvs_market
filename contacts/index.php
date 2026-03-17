@@ -34,7 +34,6 @@
 					<p class="contacts__subtitle">Свяжитесь с нами любым удобным способом — ответим быстро</p>
 				</div>
 				<div class="contacts__body">
-					<!-- Левая колонка: инфо -->
 					<div class="contacts__info">
 
 						<div class="contacts__info-group">
