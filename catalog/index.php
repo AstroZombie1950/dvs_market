@@ -1,4 +1,12 @@
 <?php
+// Роутер — читаем путь из URL
+$path     = trim($_GET['path'] ?? '', '/');
+$segments = $path ? explode('/', $path) : [];
+
+$url_brand      = $segments[0] ?? null;
+$url_model      = $segments[1] ?? null;
+$url_generation = $segments[2] ?? null;
+
 require_once __DIR__ . '/inc/fetch-catalog.php';
 require_once __DIR__ . '/inc/build-catalog.php';
 
@@ -6,8 +14,25 @@ require_once __DIR__ . '/inc/build-catalog.php';
 $raw  = get_catalog_data();
 $tree = build_catalog_tree($raw);
 
-// Передаём дерево в JS как JSON
-$tree_json = json_encode($tree, JSON_UNESCAPED_UNICODE);
+// Определяем текущий уровень
+$level = 'brands';
+if ($url_brand && $url_model && $url_generation) $level = 'engines';
+elseif ($url_brand && $url_model)                $level = 'models';
+elseif ($url_brand)                              $level = 'generations';
+
+// Резолвим реальные названия из slug
+$brand      = $url_brand      ? from_slug($url_brand,      array_keys($tree))                          : null;
+$model      = $url_model      ? from_slug($url_model,      array_keys($tree[$brand] ?? []))            : null;
+$generation = $url_generation ? from_slug($url_generation, array_keys($tree[$brand][$model] ?? []))    : null;
+
+// Передаём дерево и начальное состояние в JS
+$tree_json  = json_encode($tree, JSON_UNESCAPED_UNICODE);
+$state_json = json_encode([
+    'level'      => $level,
+    'brand'      => $brand,
+    'model'      => $model,
+    'generation' => $generation,
+], JSON_UNESCAPED_UNICODE);
 ?>
 <!DOCTYPE html>
 <html lang="ru">
@@ -46,7 +71,7 @@ $tree_json = json_encode($tree, JSON_UNESCAPED_UNICODE);
 					<span class="breadcrumbs__sep"></span>
 					<span class="breadcrumbs__current">Каталог</span>
 				</nav>
-				<h1 class="cat-hero__title">Новые моторы</h1>
+				<h1 class="cat-hero__title" id="catalog-title">Новые моторы</h1>
 			</div>
 		</section>
 		<!-- ===== CATALOG MAIN ===== -->
@@ -105,9 +130,11 @@ $tree_json = json_encode($tree, JSON_UNESCAPED_UNICODE);
 		<!-- ===================== FOOTER blocks ===================== -->
 		<?php include($_SERVER['DOCUMENT_ROOT'].'/include/footer.html'); ?>
 		
-		<!-- Дерево каталога из Google Sheets -->
-		<script>const CATALOG = <?= $tree_json ?>;</script>
-		<!-- Скрипт навигации по каталогу -->
+		<!-- Данные каталога и начальное состояние из PHP -->
+		<script>
+			const CATALOG       = <?= $tree_json ?>;
+			const CATALOG_STATE = <?= $state_json ?>;
+		</script>
 		<script src="/catalog/js/catalog-nav.js"></script>
 		<!-- Стаггер для шагов КАК КУПИТЬ ДВИГАТЕЛЬ -->
 		<script>

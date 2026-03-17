@@ -180,9 +180,12 @@
 
 	// ===== ЗАГОЛОВОК =====
 	function updateTitle() {
-		if (state.level === 'brands')      title.textContent = 'Каталог двигателей';
-		if (state.level === 'generations') title.textContent = state.brand;
-		if (state.level === 'engines')     title.textContent = state.brand + ' ' + state.model + ' ' + state.generation;
+		const map = {
+			brands:      'Новые моторы',
+			generations: 'Новые моторы для ' + (state.brand ?? ''),
+			engines:     'Новые моторы для ' + [state.brand, state.model, state.generation].filter(Boolean).join(' '),
+		};
+		title.textContent = map[state.level] ?? '';
 	}
 
 	// ===== УТИЛИТА =====

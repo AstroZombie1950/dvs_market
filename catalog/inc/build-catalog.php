@@ -4,9 +4,9 @@
  *
  * Результат:
  * [
- *   'Марка' => [
- *     'Модель' => [
- *       'Поколение' => [
+ *   'Kia' => [
+ *     'Rio' => [
+ *       'II' => [
  *         ['slug' => '...', 'engine' => 'G4EE'],
  *         ...
  *       ],
@@ -54,4 +54,23 @@ function build_catalog_tree(array $data): array {
 	}
 
 	return $tree;
+}
+
+// Строку в URL-slug: "Santa Fe" -> "santa-fe", "III" -> "iii"
+function to_slug(string $str): string {
+	$str = mb_strtolower(trim($str));
+	$str = str_replace(' ', '-', $str);
+	// убираем всё кроме латиницы, цифр и дефиса
+	$str = preg_replace('/[^a-z0-9\-]/u', '', $str);
+	// убираем двойные дефисы
+	$str = preg_replace('/-+/', '-', $str);
+	return trim($str, '-');
+}
+
+// Ищет оригинальный ключ по его slug среди массива ключей
+function from_slug(string $slug, array $keys): ?string {
+	foreach ($keys as $key) {
+		if (to_slug($key) === $slug) return $key;
+	}
+	return null;
 }
