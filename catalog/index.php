@@ -78,8 +78,10 @@ $state_json = json_encode([
 		<section class="catalog">
 			<div class="catalog__inner">
 				<div class="catalog__content">
-					<!-- сетка карточек — заполняется через JS -->
-					<div class="brand-grid" id="catalog-grid"></div>
+					<!-- сетка карточек -->
+					 <div class="brand-grid" id="catalog-grid">
+						<?= render_catalog_html($tree, $level, $brand, $model) ?>
+					</div>
 				</div>
 			</div>
 		</section>

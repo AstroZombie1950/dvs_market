@@ -1,181 +1,63 @@
 (function () {
 
 	// ===== DOM =====
-	const grid       = document.getElementById('catalog-grid');
+	const grid        = document.getElementById('catalog-grid');
 	const breadcrumbs = document.getElementById('breadcrumbs');
-	const title      = document.getElementById('catalog-title');
+	const title       = document.getElementById('catalog-title');
 
 	// ===== СОСТОЯНИЕ =====
-	// level: 'brands' | 'generations' | 'engines'
-	let state = {
-		level:      'brands',
-		brand:      null,
-		model:      null,
-		generation: null,
-	};
+	// Берём начальное состояние из PHP
+	let state = Object.assign(
+		{ level: 'brands', brand: null, model: null },
+		typeof CATALOG_STATE !== 'undefined' ? CATALOG_STATE : {}
+	);
 
 	// ===== ИНИЦИАЛИЗАЦИЯ =====
-	render();
+	// PHP уже нарисовал карточки — JS только вешает обработчики
+	updateBreadcrumbs();
+	updateTitle();
 
-	// ===== РЕНДЕР =====
-	function render() {
-		grid.innerHTML = '';
+	// ===== НАВИГАЦИЯ + HISTORY API =====
+	function navigate(newState) {
+		state = newState;
 
-		if (state.level === 'brands')      renderBrands();
-		if (state.level === 'generations') renderGenerations();
-		if (state.level === 'engines')     renderEngines();
-
-		updateBreadcrumbs();
-		updateTitle();
+		// Перезагружаем страницу по новому URL — PHP отрендерит нужный уровень
+		window.location.href = buildUrl(state);
 	}
 
-	// --- Уровень 1: карточки марок ---
-	function renderBrands() {
-		const brands = Object.keys(CATALOG);
-
-		if (!brands.length) {
-			grid.innerHTML = '<p class="brand-grid__empty">Каталог пуст</p>';
-			return;
-		}
-
-		brands.forEach((brand) => {
-			const models = Object.keys(CATALOG[brand]);
-			const card   = createCard({
-				title: brand,
-				tags:  models,
-				onTagClick: (model) => {
-					state.level = 'generations';
-					state.brand = brand;
-					state.model = model;
-					render();
-				},
-			});
-			grid.appendChild(card);
-		});
-	}
-
-	// --- Уровень 2: карточки поколений ---
-	function renderGenerations() {
-		const models = CATALOG[state.brand];
-
-		Object.entries(models).forEach(([model, generations]) => {
-			const genList = Object.keys(generations);
-			const card    = createCard({
-				title: model,
-				tags:  genList,
-				onTagClick: (generation) => {
-					state.level      = 'engines';
-					state.generation = generation;
-					render();
-				},
-			});
-			grid.appendChild(card);
-		});
-	}
-
-	// --- Уровень 3: карточки двигателей ---
-	function renderEngines() {
-		const engines = CATALOG[state.brand][state.model][state.generation];
-
-		// Если двигатель один — сразу редиректим
-		if (engines.length === 1 && engines[0].slug) {
-			window.location.href = '/product/index.php?slug=' + engines[0].slug;
-			return;
-		}
-
-		engines.forEach(({ engine, slug }) => {
-			const card = createCard({
-				title: engine,
-				tags:  slug ? [engine] : [],
-				onTagClick: () => {
-					if (slug) window.location.href = '/product/index.php?slug=' + slug;
-				},
-				// если slug пустой — карточка без тегов, просто заголовок
-				desc: slug ? '' : 'Скоро в наличии',
-			});
-			grid.appendChild(card);
-		});
-	}
-
-	// ===== КРАФТ КАРТОЧКИ =====
-	function createCard({ title, tags = [], onTagClick, desc = '' }) {
-		const card = document.createElement('div');
-		card.className = 'brand-card';
-
-		// теги моделей/поколений/двигателей
-		const tagItems = tags.map((tag) => {
-			return `<li><a href="#" data-tag="${escHtml(tag)}">${escHtml(tag)}</a></li>`;
-		}).join('');
-
-		card.innerHTML = `
-			<div class="brand-card__top"></div>
-			<div class="brand-card__body">
-				<h2 class="brand-card__title">${escHtml(title)}</h2>
-				${desc ? `<p class="brand-card__desc">${escHtml(desc)}</p>` : ''}
-				${tagItems ? `<ul class="brand-card__models">${tagItems}</ul>` : ''}
-			</div>
-		`;
-
-		// вешаем клики на теги
-		card.querySelectorAll('[data-tag]').forEach((link) => {
-			link.addEventListener('click', (e) => {
-				e.preventDefault();
-				onTagClick(link.dataset.tag);
-			});
-		});
-
-		return card;
+	// Строим URL из состояния
+	function buildUrl(s) {
+		let url = '/catalog/';
+		if (s.brand) url += toSlug(s.brand) + '/';
+		if (s.model) url += toSlug(s.model) + '/';
+		return url;
 	}
 
 	// ===== ХЛЕБНЫЕ КРОШКИ =====
 	function updateBreadcrumbs() {
-		const sep  = '<span class="breadcrumbs__sep"></span>';
-		let html   = '<a href="/">Главная</a>';
+		const sep = '<span class="breadcrumbs__sep"></span>';
+		let html  = '<a href="/">Главная</a>';
 
-		// Каталог — всегда кликабелен если не на первом уровне
 		if (state.level === 'brands') {
 			html += sep + '<span class="breadcrumbs__current">Каталог</span>';
 		} else {
-			html += sep + `<a href="#" id="crumb-catalog">Каталог</a>`;
+			html += sep + '<a href="/catalog/">Каталог</a>';
 		}
 
-		// Марка
 		if (state.brand) {
+			const brandUrl = '/catalog/' + toSlug(state.brand) + '/';
 			if (state.level === 'generations') {
-				html += sep + `<span class="breadcrumbs__current">${escHtml(state.brand)}</span>`;
+				html += sep + '<span class="breadcrumbs__current">' + escHtml(state.brand) + '</span>';
 			} else {
-				html += sep + `<a href="#" id="crumb-brand">${escHtml(state.brand)}</a>`;
+				html += sep + '<a href="' + brandUrl + '">' + escHtml(state.brand) + '</a>';
 			}
 		}
 
-		// Модель
-		if (state.model) {
-			if (state.level === 'engines') {
-				html += sep + `<span class="breadcrumbs__current">${escHtml(state.model)}</span>`;
-			}
+		if (state.model && state.level === 'engines') {
+			html += sep + '<span class="breadcrumbs__current">' + escHtml(state.model) + '</span>';
 		}
 
 		breadcrumbs.innerHTML = html;
-
-		// Клики по крошкам
-		const crumbCatalog = document.getElementById('crumb-catalog');
-		if (crumbCatalog) {
-			crumbCatalog.addEventListener('click', (e) => {
-				e.preventDefault();
-				state = { level: 'brands', brand: null, model: null, generation: null };
-				render();
-			});
-		}
-
-		const crumbBrand = document.getElementById('crumb-brand');
-		if (crumbBrand) {
-			crumbBrand.addEventListener('click', (e) => {
-				e.preventDefault();
-				state.level      = 'generations';
-				state.generation = null;
-				render();
-			});
-		}
 	}
 
 	// ===== ЗАГОЛОВОК =====
@@ -183,12 +65,21 @@
 		const map = {
 			brands:      'Новые моторы',
 			generations: 'Новые моторы для ' + (state.brand ?? ''),
-			engines:     'Новые моторы для ' + [state.brand, state.model, state.generation].filter(Boolean).join(' '),
+			engines:     'Новые моторы для ' + [state.brand, state.model].filter(Boolean).join(' '),
 		};
-		title.textContent = map[state.level] ?? '';
+		title.textContent = map[state.level] ?? 'Новые моторы';
 	}
 
-	// ===== УТИЛИТА =====
+	// ===== УТИЛИТЫ =====
+	function toSlug(str) {
+		return String(str)
+			.toLowerCase()
+			.replace(/\s+/g, '-')
+			.replace(/[^a-z0-9\-]/g, '')
+			.replace(/-+/g, '-')
+			.replace(/^-|-$/g, '');
+	}
+
 	function escHtml(str) {
 		return String(str)
 			.replace(/&/g, '&amp;')
