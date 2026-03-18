@@ -144,7 +144,7 @@ ob_start();
 					</div>
                 </div>
                 <div class="product-info">
-                    <h1 class="product-info__title">Двигатель INSERT_ENGINE_MODEL_NAME — INSERT_CAR_BRAND INSERT_CAR_MODEL INSERT_CAR_GENERATION поколение</h1>
+					<h1 class="product-info__title">Двигатель INSERT_CAR_BRAND INSERT_CAR_MODEL INSERT_CAR_GENERATION, INSERT_ENGINE_VOLUME л, INSERT_ENGINE_MODEL_NAME</h1>
                     <div class="product-info__specs">
                         <p class="product-info__spec">Двигатель INSERT_ENGINE_MODEL_NAME</p>
                         <p class="product-info__spec">Объём — INSERT_ENGINE_VOLUME</p>
