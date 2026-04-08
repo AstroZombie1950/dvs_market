@@ -37,7 +37,12 @@ ob_start();
 	<meta name="keywords" content="INSERT_KEYWORDS"/>
 	<meta name="author" content="ДВС Маркет"/>
 	<meta name="robots" content="index, follow"/>
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+	<!-- favicon -->
+	<link rel="icon" href="/favicon.ico" sizes="any">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<link rel="manifest" href="/site.webmanifest">
 	<!-- Open Graph -->
 	<meta property="og:title" content="INSERT_TITLE" />
 	<meta property="og:description" content="INSERT_OG_DESC" />
@@ -152,9 +157,11 @@ ob_start();
                         <p class="product-info__spec">Тип двигателя — INSERT_ENGINE_TYPE</p>
                         <p class="product-info__spec"><strong>Стоимость двигатель под заказ — по запросу, по наличию — по запросу.</strong></p>
                         <p class="product-info__spec">Новый двигатель БЕЗ ПРОБЕГА, с заводской ГАРАНТИЕЙ и с ДОКУМЕНТАМИ!</p>
+						<p class="product-info__spec">INSERT_ENGINE_SHORT_DESC</p>
                     </div>
 					<div class="product-info__desc">
-						<p>INSERT_ENGINE_SHORT_DESC</p>
+						<h2 class="product-description__title">Описание</h2>
+						<p class="product-description__text">INSERT_ENGINE_DESC</p>
 					</div>
 					<div class="product-info__block">
 						<h3 class="product-info__block-title">Доставка</h3>
@@ -208,8 +215,6 @@ ob_start();
 		<!-- описание + таблица -->
         <section class="product-description">
             <div class="product-description__inner">
-                <h2 class="product-description__title">Описание</h2>
-                <p class="product-description__text">INSERT_ENGINE_DESC</p>
 				<h3 class="product-description__title" style="font-size:16px; margin-bottom:12px;">Марки/модели автомобилей</h3>
                 <table class="spec-table" style="margin-bottom:8px;">
                     <tr><td>INSERT_CAR_BRAND / INSERT_CAR_MODEL / INSERT_CAR_GENERATION</td><td>INSERT_ENGINE_MODEL_NAME</td></tr>
@@ -322,6 +327,7 @@ ob_start();
         </section>
 		<!-- ===================== FOOTER blocks ===================== -->
 		<?php include($_SERVER['DOCUMENT_ROOT'].'/include/footer_no_faq.html'); ?>
+		<script src="/js/product_page.js"></script>
 	</main>
 </body>
 </html>

@@ -8,7 +8,12 @@
 	<meta name="keywords" content="FAQ, вопросы и ответы, подбор двигателя, покупка двигателя, ДВС Маркет" />
 	<meta name="author" content="ДВС Маркет" />
 	<meta name="robots" content="index, follow" />
-	<link rel="icon" href="/favicon.ico" type="image/x-icon" />
+	<!-- favicon -->
+	<link rel="icon" href="/favicon.ico" sizes="any">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<link rel="manifest" href="/site.webmanifest">
 	<!-- Open Graph -->
 	<meta property="og:title" content="Часто задаваемые вопросы — ДВС Маркет" />
 	<meta property="og:description" content="Ответы на частые вопросы о подборе, покупке и доставке двигателей в ДВС Маркет." />
